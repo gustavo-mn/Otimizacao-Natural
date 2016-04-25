@@ -3,6 +3,7 @@ n = 30; % Quantidade de dimensões da função de Ackley
 Nexec = 1; % Quantidade de execuções independentes do algoritmo
 Nfilhos = 200; % Número de filhos criados por geração
 Navaliacoes = 200000; % Quantidade de vezes que a função de Ackley será avaliada
+N_ger = ceil(Navaliacoes / Npop); % Quantidade de gerações
 tau = 1/sqrt(n);
 tau_linha = 1/sqrt(2*sqrt(n));
 epsilon = 0.1; % Valor mínimo para o passo de mutação
@@ -12,19 +13,20 @@ min_valores = Inf(Nexec, 2);
 for t = 1:Nexec
 
     P = unifrnd(-30,30,2*n,Npop); % Inicialização aleatória da população
-    contador = 0;
+    % contador = 0;
+    ger = 1; % Geração atual
     opt = Inf;
-    fitness = Inf(1,Npop);
+    fitness = Inf(N_ger,Npop);
 
-    while (contador < Navaliacoes) && (min(fitness) ~= 0)
+    while (ger <= N_ger) && (min(fitness(ger,:)) ~= 0)
             
             % Cálculo dos fitness
-            fitness = -20 * exp(-0.2 * sqrt((1/n) * sum(P(1:30,:).^2, 1))) - exp((1/n) * sum(cos(2 * pi * P(1:30,:)), 1)) + 20 + exp(1);
-            contador = contador + 1;
-            opt = find(fitness == min(fitness), 1); 
+            fitness(ger,:) = -20 * exp(-0.2 * sqrt((1/n) * sum(P(1:30,:).^2, 1))) - exp((1/n) * sum(cos(2 * pi * P(1:30,:)), 1)) + 20 + exp(1);
+            % contador = contador + Npop;
+            opt = find(fitness(ger,:) == min(fitness(ger,:)), 1); 
 
-            if min_valores(t,1) > min(fitness)
-                min_valores(t,:) = [min(fitness) contador];
+            if min_valores(t,1) > min(fitness(ger,:))
+                min_valores(t,:) = [min(fitness(ger,:)) ger];
             end
 
             %min_valores(t, contador) = min(fitness);
@@ -107,6 +109,13 @@ for t = 1:Nexec
 
             P = P_filhos(:, idx);
 
+            ger = ger + 1;
+
     end
+
+    if (ger <= N_ger)
+        fitness = fitness(1:ger, :);
+    end
+
 end
 
