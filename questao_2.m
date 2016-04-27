@@ -1,8 +1,12 @@
-Npop = 100; % Tamanho da população
+clear all
+close all
+clc
+
+N_pop = 100; % Tamanho da população
 L = 25; % Tamanho do genótipo
 p_mut = 1/L; % Probabilidade de mutação
 p_rec = 0.7; % Probabilidade de recombinação
-Nger = 100; % Número máximo de gerações
+N_ger = 100; % Número máximo de gerações
 n = 1; % Geração atual
 T = 10; % Quantidade de rodadas do algoritmo
 
@@ -10,14 +14,14 @@ geracoes_otimas = zeros(1,T); % Guarda em que gerações alcançou-se o máximo 
 
 for t=1:T
 
-    fitness = zeros(1,Npop); % Vetor de fitness da população
-    max_fitness = zeros(1,Nger); % Vetor com a melhor fitness encontrada em cada geração
-    min_fitness = zeros(1,Nger); % Vetor com a pior fitness encontrada em cada geração
-    media_fitness = zeros(1,Nger); % Vetor com a média das fitness encontrada em cada geração
+    fitness = zeros(N_ger,N_pop); % Vetor de fitness da população
+    max_fitness = zeros(1,N_ger); % Vetor com a melhor fitness encontrada em cada geração
+    min_fitness = zeros(1,N_ger); % Vetor com a pior fitness encontrada em cada geração
+    media_fitness = zeros(1,N_ger); % Vetor com a média das fitness encontrada em cada geração
 
-    P = unidrnd(2, [L, Npop]) - 1; % Inicialização aleatória da população
+    P = unidrnd(2, [L, N_pop]) - 1; % Inicialização aleatória da população
 
-    while (n <= Nger) && (max_fitness(n) ~= 25) % Valor máximo de fitness é 25
+    while (n <= N_ger) && (max_fitness(n) ~= 25) % Valor máximo de fitness é 25
         
         %% Cálculo de fitness
         
@@ -31,20 +35,20 @@ for t=1:T
 
         % Probabilidade proporcional ao fitness
 
-        pdf_fitness = fitness/sum(fitness);
+        pdf_fitness = fitness(n,:)/sum(fitness(n,:));
         cdf_fitness = cumsum(pdf_fitness);
         
         % Algoritmo SUS
 
         i = 1;
         membro_atual = i;
-        r = unifrnd(0, 1/Npop);    
-        reprodutores = zeros(1,Npop);
+        r = unifrnd(0, 1/N_pop);    
+        reprodutores = zeros(1,N_pop);
 
-        while (membro_atual <= Npop)
+        while (membro_atual <= N_pop)
             while (r <= cdf_fitness(i))
                 reprodutores(membro_atual) = i;
-                r = r + 1/Npop;
+                r = r + 1/N_pop;
                 membro_atual = membro_atual + 1; 
             end
             i = i + 1;
@@ -103,7 +107,7 @@ for t=1:T
         n = n + 1;
     end
 
-    if (n < Nger)
+    if (n < N_ger)
         max_fitness = max_fitness(1:n);
         min_fitness = min_fitness(1:n);
         media_fitness = media_fitness(1:n);
@@ -113,23 +117,23 @@ for t=1:T
         % Plot dos gráficos
 
         stem(max_fitness);
-        xlabel('Geração', 'FontSize', 30);
-        ylabel('Fitness Máxima', 'FontSize', 30);
-        title('Melhores fitness por geração', 'FontSize', 30);
+        xlabel('Geracao', 'FontSize', 30);
+        ylabel('Fitness Maxima', 'FontSize', 30);
+        title('Melhores fitness por geracao', 'FontSize', 30);
         set(gca, 'FontSize', 30);
         figure;
 
         stem(min_fitness);
-        xlabel('Geração', 'FontSize', 30);
-        ylabel('Fitness Mínima', 'FontSize', 30);
-        title('Piores fitness por geração', 'FontSize', 30);
+        xlabel('Geracao', 'FontSize', 30);
+        ylabel('Fitness Minima', 'FontSize', 30);
+        title('Piores fitness por geracao', 'FontSize', 30);
         set(gca, 'FontSize', 30);
         figure;
 
         stem(media_fitness);
-        xlabel('Geração', 'FontSize', 30);
-        ylabel('Média Fitness', 'FontSize', 30);
-        title('Média dos fitness por geração', 'FontSize', 30);
+        xlabel('Geracao', 'FontSize', 30);
+        ylabel('Media Fitness', 'FontSize', 30);
+        title('Media dos fitness por geracao', 'FontSize', 30);
         set(gca, 'FontSize', 30);
     end
 

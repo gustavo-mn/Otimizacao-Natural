@@ -271,7 +271,7 @@ end
 	
 	\paragraph{} Em virtude da representação escolhida, o algoritmo alcança o valor ótimo bem rapidamente. Na realidade, em muitas das vezes, a solução ótima já se encontra na primeira geração, a qual é obtida através de uma inicialização aleatória da população. Essa foi uma das justificativas de se utilizar como critério de parada somente um número fixo de gerações, em vez de incluir, também, a obtenção da solução ótima e isso permite analisar como se caracterizam as populações de cada geração. Por conta disso, também escolheu-se uma população bastante reduzida (20 indivíduos), como forma de se tentar diminuir as chances de se obter logo na primeira geração a solução ótima. Em 4 das 5 vezes que o algoritmo foi executado, o ótimo global foi alcançado logo na primeira geração, ao passo que na 5ª vez, foram precisas 4 gerações até que ele fosse encontrado.\\ 
 	
-	\paragraph{} A Figura \ref{melhores_fitness} mostra o valor da melhor aptidão encontrada em cada geração, no caso dessa última execução (lembrando que o valor mínimo de $y(x) = -0.3$ resulta em uma aptidão de $-\frac{1}{y(x)} = \frac{10}{3} \approx 3.33$). Note que após a 4ª geração, quando o ótimo é encontrado, a solução ótima se preserva. Além disso, mais indivíduos que representam essa solução começam a fazer parte das populações subsequentes, conforme se observa na Figura \ref{media_fitness}, de modo que, a partir da 8ª geração, eles começam a dominar a população. Esse é um comportamento que se observa nas demais execuções do programa e reflete o fato de que os indivíduos mais aptos têm mais chances de se reproduzir e, consequentemente, de gerar filhos também mais aptos. Ao mesmo tempo, o critério adotado para a seleção de pais permite que, eventualmente, indíviduos menos aptos se reproduzam e gerem filhos menos aptos, conforme se nota na última geração da Figura \ref{media_fitness}. A tendência, no entanto, é que os indivíduos de melhor aptidão dominem completamente a população.\\
+	\paragraph{} A Figura \ref{melhores_fitness} mostra o valor da melhor aptidão encontrada em cada geração, no caso dessa última execução (lembrando que o valor mínimo de $y(x) = -0.3$ resulta em uma aptidão de $-\frac{1}{y(x)} = \frac{10}{3} \approx 3.33$). Note que após a 4ª geração, quando o ótimo é encontrado, a solução ótima se preserva. Além disso, mais indivíduos que representam essa solução começam a fazer parte das populações subsequentes, conforme se observa na Figura \ref{media_fitness}, de modo que, a partir da 8ª geração, eles começam a dominar a população. Esse é um comportamento que se observa nas demais execuções do programa e reflete o fato de que os indivíduos mais aptos têm mais chances de se reproduzir e, consequentemente, de gerar filhos também mais aptos. Ao mesmo tempo, o critério adotado para a seleção de pais permite que, eventualmente, indíviduos menos aptos se reproduzam e gerem filhos menos aptos, conforme se nota na última geração da Figura \ref{media_fitness}. A tendência, no entanto, é que os indivíduos de melhor aptidão dominem completamente a população. 
 	
 	\begin{figure}[H]
 		\includegraphics[width=0.9\textwidth]{Q01_melhores_fitness.jpg}
@@ -286,7 +286,7 @@ end
 		\label{media_fitness}
 	\end{figure}
 	
-	\paragraph{} A Figura \ref{piores_fitness} exibe os menores valores encontrados de aptidão ao longo das gerações. Isso mostra que, embora os indivíduos de melhor aptidão sejam maioria nas últimas gerações, eles ainda não dominaram completamente a população (indicando que o algoritmo ainda não convergiu para a solução ótima).\\
+	\paragraph{} A Figura \ref{piores_fitness} exibe os menores valores encontrados de aptidão ao longo das gerações. Isso mostra que, embora os indivíduos de melhor aptidão sejam maioria nas últimas gerações, eles ainda não dominaram completamente a população (indicando que o algoritmo ainda não convergiu para a solução ótima). Vale ressaltar, também, que em gerações avançadas, quando a maioria da população corresponder a soluções ótimas, o processo de mutação tem um efeito mais ``degenerativo", uma vez que ela tenderá a tornar indivíduos com aptidão máximo em indivíduos com aptidão inferior.\\
 	
 	\begin{figure}[H]
 		\centering
@@ -312,7 +312,7 @@ end
 	
 	\textbf{After every generation find the best, worst, and mean fitness in the population, and plot these on a graph with the time as the $x$-axis. Now do ten runs and find the mean and standard deviation of the time taken to find the optimum.}\\
 	
-	\paragraph{} O código, implementado em Octave, é exibido a seguir:\\
+	\paragraph{} O código, implementado em Octave, correspondente à solução desse problema, é exibido a seguir:\\
 	
 	\begin{lstlisting}
 Npop = 100; % Tamanho da população
@@ -458,6 +458,52 @@ disp(['Média de gerações para alcançar o máximo: ' num2str(mean(geracoes_ot
 disp(['Desvio-padrão de gerações para alcançar o máximo: ' num2str(std(geracoes_otimas, 1))])
 	\end{lstlisting}
 	
+	\paragraph{} As Figuras \ref{melhores_fitness_100_q02}, \ref{piores_fitness_100_q02} e \ref{media_fitness_100_q02} mostram, respectivamente, as melhores, piores e a média das fitness encontradas ao longo das gerações, em uma das execuções do programa. Conforme se observa na Figura \ref{melhores_fitness_100_q02}, a melhor fitness (correspondente ao valor $L = 25$) nunca foi alcançada. Esse fato se observou em todas as execuções do algoritmo (10 vezes), isto é, em nenhuma delas o máximo global foi alcançado. Entretanto, analisando o gráfico da Figura \ref{media_fitness_100_q02}, nota-se uma tendência de melhora das fitness da população, ao longo das gerações. Isso sugere, novamente, que indivíduos mais aptos estão dominando as populações de gerações mais recentes e que, caso se utilize mais gerações, indivíduos que representam a solução ótima virão a ser gerados.\\
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width = 0.9\textwidth]{Q02_melhores_fitness_100.jpg}
+		\caption{Melhores fitness encontradas ao longo de 100 gerações}
+		\label{melhores_fitness_100_q02}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width = 0.9\textwidth]{Q02_piores_fitness_100.jpg}
+		\caption{Piores fitness encontradas ao longo de 100 gerações}
+		\label{piores_fitness_100_q02}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width = 0.9\textwidth]{Q02_media_fitness_100.jpg}
+		\caption{Média das fitness encontradas ao longo de 100 gerações}
+		\label{media_fitness_100_q02}
+	\end{figure}
+	
+	\paragraph{} De fato, as Figuras \ref{melhores_fitness_300_q02}, \ref{piores_fitness_300_q02} e \ref{media_fitness_300_q02} ilustram o comportamento da população quando 300 gerações são consideradas, em uma das execuções do algoritmo. É possível observar que existem indivíduos que se aproximam cada vez mais do ótimo global, em relação aos indivíduos das 100 primeiras gerações. Como todas as execuções atenderam ao critério de parada de número máximo de gerações avaliadas, não alcançando, portanto, o máximo global, a média das gerações é de 100 (para 100 gerações), e o desvio-padrão, 0.\\ 
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width = 0.9\textwidth]{Q02_melhores_fitness_300.jpg}
+		\caption{Melhores fitness encontradas ao longo de 300 gerações}
+		\label{melhores_fitness_300_q02}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width = 0.9\textwidth]{Q02_piores_fitness_300.jpg}
+		\caption{Piores fitness encontradas ao longo de 300 gerações}
+		\label{piores_fitness_300_q02}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width = 0.9\textwidth]{Q02_media_fitness_300.jpg}
+		\caption{Média das fitness encontradas ao longo de 300 gerações}
+		\label{media_fitness_300_q02}
+	\end{figure}
+	
 	\section*{Questão 3}
 	
 	\textbf{\textit{3. Capítulo 4, Exercício 5:}}\\\\
@@ -583,8 +629,55 @@ end
 	
 	\section*{Questão 4 (Bônus)}
 	
-	\textbf{4. Implemente um algoritmo genético simples (SAG), de modo a solucionar o problema das 8 rainhas.}
+	\textbf{4. Implemente um algoritmo genético simples (SAG), de modo a solucionar o problema das 8 rainhas.}\\
 
+	\paragraph{} Nessa questão bônus, optou-se por resolver o problema clássico das 8 rainhas, utilizando Algoritmos Evolucionários (mais especificamente, Algoritmos Genéticos). Os elementos do algoritmo são definidos a seguir:\\
+	
+	\begin{itemize}
+		\item[\textbf{1.}] \textbf{Representação}
+		
+		\paragraph{} A representação escolhida consiste em um genótipo, formado por um vetor de inteiros de 8 elementos, com valores possíveis entre 1 e 8, o qual codifica um fenótipo referente a uma matriz 8x8, correspondente a um tabuleiro de xadrez. Essa matriz é composta por colunas que apresentam elementos iguais a 0, exceto em uma única linha, na qual o elemento em questão vale 1. Cada coluna contém uma linha diferente que abriga esse valor 1. Os números que compõem o genótipo explicitam, exatamente, para cada coluna, a linha que contém o elemento 1. Além disso, colunas distintas não podem ter a mesma linha com elemento 1 (ou seja, não há elementos repetidos no genótipo de cada indivíduo). Os valores 1 representam a posição das rainhas no tabuleiro. Considere, por exemplo, o genótipo representado por $G = [1 \quad 4 \quad 5 \quad 3 \quad 8 \quad 6 \quad 7 \quad 2]$. O fenótipo associado a esse genótipo é exibido a seguir:\\
+		
+		\begin{equation*}
+		\begin{array}{cccccccc}
+		1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\ 
+		0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\ 
+		0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
+		0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\ 
+		0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\ 
+		0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\ 
+		0 & 0 & 0 & 0 & 1 & 0 & 0 & 0
+		\end{array} 
+		\end{equation*}
+		
+		\paragraph{} O motivo de se escolher essa representação é que ela descarta soluções que contenham rainhas situadas na mesma linha ou coluna, as quais corresponderiam a violações das restrições do problema (sendo, portanto, soluções inválidas). Isso diminui o espaço de busca do algoritmo. A fitness é calculada através da contagem quantas rainhas, no tabuleiro, estão a salvo, isto é, que estão livres de quaisquer ataques. Para tal, não deve haver rainhas na mesma diagonal, linha ou coluna .\\
+		
+		\item[\textbf{2.}] \textbf{Seleção de Pais}
+				
+		\paragraph{} A seleção de pais é feita levando-se em conta a aptidão de cada indivíduo (proporcional ao fitness de cada um). O tamanho da população reprodutora é igual ao da população (no caso, 100) e a montagem da população reprodutora é feita aplicando-se o algoritmo ``Stochastic Universal Sampling". Cada par de pais gera um par de filhos.\\
+		
+		\item[\textbf{3.}] \textbf{Recombinação}
+		
+		\paragraph{} Com a população de reprodutores montada, começa-se a geração da população de filhos. Os pais são sorteados aleatoriamente na população reprodutora e, uma vez selecionados, podem ou não sofrer o processo de recombinação. Caso não sofram, os filhos gerados são, simplesmente, cópias de ambos os pais. Caso contrário, o processo de recombinação adotado é conhecido como \emph{``One-point Crossover"} e consiste, basicamente, em sortear uma posição aleatória do genótipo, dividindo-o em duas regiões. A montagem dos filhos é feita, então, combinando metades distintas de cada pai (filho 1 = metade 1 do pai 1 + metade 2 do pai 2 e filho 2 = metade 1 do pai 2 + metade 2 do pai 1). Entretanto, vale ressaltar que, para a representação escolhida, não deve haver elementos repetidos no genótipo. Com isso, após se copiar a primeira metade de um pai para um filho, a segunda metade desse filho é montada, analisando cada gene do outro pai. Se um gene da segunda metade desse pai já existir na primeira metade do filho em questão, ele não é copiado e analisa-se o próximo gene desse pai. O gene só é copiado se não for repetido. Caso se chegue ao fim da segunda metade do pai e a segunda metade do filho não tenha sido finalizada, continua-se a análise do genótipo deste pai do começo, ou seja, de sua primeira metade, até se encontrar os genes que faltam ao filho e copiá-los.\\
+		
+		\item[\textbf{4.}] \textbf{Mutação}
+		
+		\paragraph{} Após gerados os filhos, podem ocorrer, ainda, mutações nos genes. Arbitrou-se que a mutação ocorre somente nos filhos gerados e que o novo indivíduo gerado pela mutação substitui sua versão pré-mutação (ao invés de se preservar os indivíduos pré- e pós-mutação). A mutação consiste em trocar a posição de dois elementos no genótipo (por exemplo, trocar a posição dos genes 2 e 5; o gene 5 passa a ocupar a posição 2, ao passo que o gene 2, a posição 5.).\\
+		
+		\item[\textbf{5.}] \textbf{Seleção de Sobreviventes}
+		
+		\paragraph{} A seleção dos sobreviventes é puramente generacional, ou seja, toda a população de filhos compõe a geração seguinte, enquanto que todos os pais são descartados.\\
+		
+		\item[\textbf{6.}] \textbf{Inicialização}
+		
+		\paragraph{} A inicialização da população é feita de forma aleatória (preservando a condição de que um genótipo não contém elementos repetidos). Para tal, inicializou-se o primeiro indivíduo com genótipo $G_1 = [1 \quad 2 \quad 3 \quad 4 \quad 5 \quad 6 \quad 7 \quad 8 \quad]$ e os indivíduos subsequentes são gerados, trocando a posição de dois genes do indivíduo anterior. Isso é repetido até que se gere o tamanho da população desejada.\\
+		
+		\item[\textbf{7.}] \textbf{Condição de Parada}
+		
+		\paragraph{} O algoritmo encerra sua execução após se atingir um determinado número de gerações ou uma solução ótima seja encontrada.\\
+	\end{itemize}
+	
 	\paragraph{} O código, em Octave, que implementa a solução, é exposto a seguir:\\
 	
 	\begin{lstlisting}
