@@ -271,7 +271,7 @@ end
 	
 	\paragraph{} Em virtude da representação escolhida, o algoritmo alcança o valor ótimo bem rapidamente. Na realidade, em muitas das vezes, a solução ótima já se encontra na primeira geração, a qual é obtida através de uma inicialização aleatória da população. Essa foi uma das justificativas de se utilizar como critério de parada somente um número fixo de gerações, em vez de incluir, também, a obtenção da solução ótima e isso permite analisar como se caracterizam as populações de cada geração. Por conta disso, também escolheu-se uma população bastante reduzida (20 indivíduos), como forma de se tentar diminuir as chances de se obter logo na primeira geração a solução ótima. Em 4 das 5 vezes que o algoritmo foi executado, o ótimo global foi alcançado logo na primeira geração, ao passo que na 5ª vez, foram precisas 4 gerações até que ele fosse encontrado.\\ 
 	
-	\paragraph{} A Figura \ref{melhores_fitness} mostra o valor da melhor aptidão encontrada em cada geração, no caso dessa última execução (lembrando que o valor mínimo de $y(x) = -0.3$ resulta em uma aptidão de $-\frac{1}{y(x)} = \frac{10}{3} \approx 3.33$). Note que após a 4ª geração, quando o ótimo é encontrado, a solução ótima se preserva. Além disso, mais indivíduos que representam essa solução começam a fazer parte das populações subsequentes, conforme se observa na Figura \ref{media_fitness}, de modo que, a partir da 8ª geração, eles começam a dominar a população. Esse é um comportamento que se observa nas demais execuções do programa e reflete o fato de que os indivíduos mais aptos têm mais chances de se reproduzir e, consequentemente, de gerar filhos também mais aptos. Ao mesmo tempo, o critério adotado para a seleção de pais permite que, eventualmente, indíviduos menos aptos se reproduzam e gerem filhos menos aptos, conforme se nota na última geração da Figura \ref{media_fitness}. A tendência, no entanto, é que os indivíduos de melhor aptidão dominem completamente a população. 
+	\paragraph{} A Figura \ref{melhores_fitness} mostra o valor da melhor aptidão encontrada em cada geração, no caso dessa última execução (lembrando que o valor mínimo de $y(x) = -0.3$ resulta em uma aptidão de $-\frac{1}{y(x)} = \frac{10}{3} \approx 3.33$). Note que após a 4ª geração, quando o ótimo é encontrado, a solução ótima se preserva. Além disso, mais indivíduos que representam essa solução começam a fazer parte das populações subsequentes, conforme se observa na Figura \ref{media_fitness}, de modo que, a partir da 8ª geração, eles começam a dominar a população. Esse é um comportamento que se observa nas demais execuções do programa e reflete o fato de que os indivíduos mais aptos têm mais chances de se reproduzir e, consequentemente, de gerar filhos também mais aptos. Ao mesmo tempo, o critério adotado para a seleção de pais permite que, eventualmente, indíviduos menos aptos se reproduzam e gerem filhos menos aptos, conforme se nota na última geração da Figura \ref{media_fitness}. A tendência, no entanto, é que os indivíduos de melhor aptidão dominem completamente a população.\\
 	
 	\begin{figure}[H]
 		\includegraphics[width=0.9\textwidth]{Q01_melhores_fitness.jpg}
@@ -508,112 +508,116 @@ disp(['Desvio-padrão de gerações para alcançar o máximo: ' num2str(std(gera
 	
 	\textbf{\textit{3. Capítulo 4, Exercício 5:}}\\\\
 	
-	\textbf{Create an Evolutionary Strategy for the Ackley function with $n$ = 30, using the set-up in Sect. 4.9.1 and a comma selection strategy. Make 100 independent runs, store the best value of each run and calculate the mean and standard deviation of these values.}
+	\textbf{Create an Evolutionary Strategy for the Ackley function with $n = 30$, using the set-up in Sect. 4.9.1 and a comma selection strategy. Make 100 independent runs, store the best value of each run and calculate the mean and standard deviation of these values.}
 	
 	\paragraph{} O código, feito em Octave, é apresentado abaixo:\\
 	
 	\begin{lstlisting}
-Npop = 30; % Tamanho da população
+clear all
+close all
+clc
+
+N_pop = 30; % Tamanho da população
 n = 30; % Quantidade de dimensões da função de Ackley
-Nexec = 1; % Quantidade de execuções independentes do algoritmo
-Nfilhos = 200; % Número de filhos criados por geração
-Navaliacoes = 200000; % Quantidade de vezes que a função de Ackley será avaliada
+N_exec = 5; % Quantidade de execuções independentes do algoritmo
+N_filhos = 200; % Número de filhos criados por geração
+N_avaliacoes = 30000; % Quantidade de vezes que a função de Ackley será avaliada
+N_ger = ceil(N_avaliacoes / N_pop); % Quantidade de gerações
 tau = 1/sqrt(n);
 tau_linha = 1/sqrt(2*sqrt(n));
 epsilon = 0.1; % Valor mínimo para o passo de mutação
-min_valores = Inf(Nexec, 2);
-%melhores_solucoes = zeros(2*n, Navaliacoes, Nexec);
+min_valores = Inf(N_exec, 2);
+%melhores_solucoes = zeros(2*n, N_avaliacoes, N_exec);
 
-for t = 1:Nexec
+for t = 1:N_exec
 
-    P = unifrnd(-30,30,2*n,Npop); % Inicialização aleatória da população
-    contador = 0;
+    P = [unifrnd(-30,30,n,N_pop); epsilon*ones(n,N_pop)]; % Inicialização aleatória da população
+    ger = 1; % Geração atual
     opt = Inf;
-    fitness = Inf(1,Npop);
+    fitness = Inf(N_ger,N_pop);
+    melhores_fitness = Inf(1, N_ger);
+    media_fitness = zeros(1, N_ger);
+    piores_fitness = Inf(1, N_ger);
 
-    while (contador < Navaliacoes) && (min(fitness) ~= 0)
+    while (ger <= N_ger) && (min(fitness(ger,:)) ~= 0)
             
             % Cálculo dos fitness
-            fitness = -20 * exp(-0.2 * sqrt((1/n) * sum(P(1:30,:).^2, 1))) - exp((1/n) * sum(cos(2 * pi * P(1:30,:)), 1)) + 20 + exp(1);
-            contador = contador + 1;
-            opt = find(fitness == min(fitness), 1); 
+            fitness(ger,:) = -20 * exp(-0.2 * sqrt((1/n) * sum(P(1:n,:).^2, 1))) - exp((1/n) * sum(cos(2 * pi * P(1:n,:)), 1)) + 20 + exp(1);
+            opt = find(fitness(ger,:) == min(fitness(ger,:)), 1);
+            melhores_fitness(ger) = min(fitness(ger,:));
+            media_fitness(ger) = mean(fitness(ger,:)); 
+            piores_fitness(ger) = max(fitness(ger,:));
 
-            if min_valores(t,1) > min(fitness)
-                min_valores(t,:) = [min(fitness) contador];
+            if min_valores(t,1) > min(fitness(ger,:))
+                min_valores(t,:) = [min(fitness(ger,:)) ger];
             end
-
-            %min_valores(t, contador) = min(fitness);
-            %melhores_solucoes(:,contador,t) = P(:,opt);
 
             % Mutação
 
-            P_filhos = zeros(size(P,1), Nfilhos); % 'Npop' filhos de mutação e '(Nfilhos - Npop)' de recombinação
-
-            %for i = 1:size(P, 2)
+            P_filhos = zeros(size(P,1), N_filhos); % 'N_pop' filhos de mutação e '(N_filhos - N_pop)' de recombinação
             
                 % Mutação dos passos
-                mutacoes = exp(tau * randn(n,Npop)) .* (ones(n,1) * exp(tau_linha * randn(1,n))); % Alteração dos passos de mutação
-                %mutacoes = P(31:end, i);
-                %mutacoes = mutacoes .* (exp(tau_linha * randn(1)) * exp(tau * randn(n,1))); % Alteração dos passos de mutação
-                %keyboard();
-                if ~isempty(find((mutacoes < epsilon), 1)) % Se houver algum passo menor que o mínimo
-                    mutacoes(mutacoes < epsilon) = epsilon; % Ajusta o passo para o mínimo aceitável
-                end
+            mutacoes = exp(tau * randn(n,N_pop)) .* (ones(n,1) * exp(tau_linha * randn(1,n))); % Alteração dos passos de mutação
+            if ~isempty(find((mutacoes < epsilon), 1)) % Se houver algum passo menor que o mínimo
+                mutacoes(mutacoes < epsilon) = epsilon; % Ajusta o passo para o mínimo aceitável
+            end
                 
-                P_filhos(31:end, 1:Npop) = mutacoes;
+            P_filhos((n+1):end, 1:N_pop) = mutacoes;
 
-                % Mutação das soluções
+            % Mutação das soluções
                 
-                %P_filhos(:, i) = [P(1:30, i)+mutacoes; mutacoes];
-                P_filhos(1:30, 1:Npop) = P(1:30, 1:Npop) + mutacoes;
-
-            %end
+            P_filhos(1:n, 1:N_pop) = P(1:n, 1:N_pop) + mutacoes .* randn(n,N_pop);
 
             % Recombinações
 
-            for n_rec = 1:(Nfilhos - Npop)
+            for n_rec = 1:(N_filhos - N_pop)
                 
                 % Seleção dos pais                
 
-                n_p1 = unidrnd(Npop);
-                n_p2 = unidrnd(Npop);
+                n_p1 = unidrnd(N_pop);
+                n_p2 = unidrnd(N_pop);
                 while (n_p2 == n_p1)
-                    n_p2 = unidrnd(Npop);
+                    n_p2 = unidrnd(N_pop);
                 end
                         
                 sol_filho = zeros(n, 1);
                 mut_filho = zeros(n, 1);
-                sol_pai1 = P(1:30, n_p1);
-                sol_pai2 = P(1:30, n_p2);
-                mut_pai1 = P(31:end, n_p1);
-                mut_pai2 = P(31:end, n_p2);
+                sol_pai1 = P(1:n, n_p1);
+                sol_pai2 = P(1:n, n_p2);
+                mut_pai1 = P((n+1):end, n_p1);
+                mut_pai2 = P((n+1):end, n_p2);
 
                 % Recombinação discreta (soluções)
                 
                 z = unifrnd(0,1, n, 1);
 
-                sol_filho(z < 0.5) = sol_pai1(z < 0.5);
-                sol_filho(z >= 0.5) = sol_pai2(z >= 0.5);
+                for i = 1:length(z)
+                    if z(i) < 0.5
+                        sol_filho(i) = sol_pai1(i);
+                    else
+                        sol_filho(i) = sol_pai2(i);
+                    end
+                end
 
                 % Recombinação intermediária (passos)
 
                 mut_filho = (mut_pai1 + mut_pai2)/2;
 
-                P_filhos(:, (Npop+n_rec)) = [sol_filho; mut_filho];
+                P_filhos(:, (N_pop+n_rec)) = [sol_filho; mut_filho];
                     
             end
 
             % Seleção dos sobreviventes
 
-            % Generacional com 'Npop' filhos mais aptos
+            % Generacional com 'N_pop' filhos mais aptos
 
             fitness_filhos = ones(1,size(P_filhos,2));
             
-            fitness_filhos = -20 * exp(-0.2 * sqrt((1/n) * sum(P_filhos(1:30,:).^2, 1))) - exp((1/n) * sum(cos(2 * pi * P_filhos(1:30,:)), 1)) + 20 + exp(1);
+            fitness_filhos = -20 * exp(-0.2 * sqrt((1/n) * sum(P_filhos(1:n,:).^2, 1))) - exp((1/n) * sum(cos(2 * pi * P_filhos(1:n,:)), 1)) + 20 + exp(1);
 
-            idx = zeros(1,Npop);
+            idx = zeros(1,N_pop);
 
-            for i = 1:Npop
+            for i = 1:N_pop
 
                 idx(i) = find(fitness_filhos == min(fitness_filhos), 1);
                 fitness_filhos(idx(i)) = Inf;
@@ -622,10 +626,76 @@ for t = 1:Nexec
 
             P = P_filhos(:, idx);
 
+            ger = ger + 1;
+
     end
+
+    if (ger <= N_ger)
+        fitness = fitness(1:ger, :);
+    end
+
 end
 
+
 	\end{lstlisting}
+	
+	\paragraph{}	 Abaixo, estão definidos alguns dos elementos essenciais de Algoritmos Evolucionários (os quais estão definidos na Seção 4.9.1, citada no enunciado do problema).\\
+	
+	\begin{itemize}
+		
+		\item[\textbf{1.}] \textbf{Representação}
+		
+		\paragraph{} A representação consiste em um vetor de números reais. Esse vetor contém 60 elementos: os 30 primeiros, correspondem à solução propriamente dita, ao passo que os 30 últimos representam os passos que serão usados na mutação (e que, também, estão sujeitos à mutação). Nessa questão, adotou-se que cada gene apresenta um passo distinto. O fitness de cada indivíduo é definido como sendo o resultado da função de Ackley, aplicado aos 30 primeiros genes.\\
+		
+		\item[\textbf{2.}] \textbf{Seleção de pais}
+	
+		\paragraph{} Todos os indivíduos da população são possíveis pais, que serão usados na recombinação. A seleção, nesse caso, é puramente aleatória, ou seja, sorteiam-se dois pais da população total para realizar a recombinação.\\
+		
+		\item[\textbf{3.}] \textbf{Mutação}
+		
+		\paragraph{} Cada indivíduo sofre mutação e o indivíduo resultante passa a integrar a população de filhos (portanto, ele não substitui o indivíduo que o gerou). Antes da mutação dos genes referentes à solução, os passos sofrem mutações, segundo a seguinte fórmula:\\
+		
+		\begin{equation*}
+		\sigma_i^{'} = \sigma_i \times e^{\tau^{'} \times N(1,0) + \tau \times N_i(0,1)}
+		\end{equation*}
+		
+		\paragraph{} Na equação acima, $\sigma_i$ é o passo pré-mutação associado ao gene $i$	; $\tau^{'}$ e $\tau$ são constantes definidas, respectivamente, como $\frac{1}{\sqrt{2n}}$ e $\frac{1}{\sqrt{2 \sqrt{n}}}$, com $n = 30$; $N(1,0)$ é uma amostra de uma distribuição Gaussiana, com média 0 e desvio-padrão 1; e $N_i(0,1)$ é o $i$-ésimo sorteio dessa distribuição, cujo valor entra no cálculo do passo associado ao gene $i$. Adotou-se, também, um valor mínimo para o passo, de modo a evitar que passos muito pequenos fossem considerados (o que significaria em uma mudança muito pouco impactante no gene). Para essa questão, esse valor mínimo foi fixado em 0.1.\\
+		
+		\paragraph{} Após a mutação dos passos, cada gene associado à solução sofre mutação da seguinte forma: $x_i^{'} = x_i + \sigma_i^{'} \times N_i(0,1)$.	
+	
+		\item[\textbf{4.}] \textbf{Recombinação}
+		
+		\paragraph{} Com os pais selecionados, duas estratégias de recombinação são usadas. Para as regiões dos genótipos que contêm as soluções, a recombinação é dita \emph{discreta}. Nesse caso, um número da distribuição uniforme entre 0 e 1 é sorteado e seu valor é comparado a um limiar, usualmente 0.5. Caso ele seja maior do que o limiar, o filho gerado recebe o gene de um dos pais; caso contrário, recebe do outro. Já para as regiões referentes ao passo, a recombinação é dita \emph{intermediária}, isto é, cada novo passo é dado pela média aritmética dos passos correspondentes dos pais em questão. Vale ressaltar que a recombinação, nesse caso, resulta em somente 1 filho.\\
+		
+		\item[\textbf{5.}] \textbf{Seleção de sobreviventes}
+		
+		\paragraph{} A seleção de sobreviventes é denominada ($\mu$,$\lambda$) e corresponde à uma seleção generacional. No entanto, como a quantidade de filhos é superior à população original (nesse caso, 200 filhos são gerados, enquanto que a população tem tamanho 30), é feita uma seleção dos melhores filhos, os quais integrarão a nova geração. Para isso, os filhos são ranqueados segundo o valor de seu fitness (função de Ackley), sendo selecionados, portanto, os 30 mais aptos.\\
+		
+		\item[\textbf{7.}] \textbf{Inicialização}
+		
+		\paragraph{} A inicialização é feita de forma aleatória, com a região de genes referentes à solução sendo inicializados com valores entre -30 e 30, enquanto que a região dos passos é inicializada de forma igual, para todos os passos e indivíduos, com cada passo igual ao mínimo aceitável (no caso, definiu-se que esse mínimo seria de 0.1).\\		
+		
+		\item[\textbf{7.}] \textbf{Condição de parada}
+		
+		\paragraph{} Na Seção 4.9.1 do livro, é sugerido que a condição de parada seja após se avaliarem 200000 vezes a função de Ackley, ou até que o mínimo global seja alcançado. Entretanto, devido ao elevado tempo de execução, reduziu-se essa condição: a função de Ackley será avaliada 30000 vezes, em vez de 200000. Além disso, como em cada geração sempre são feitas 30 análises dessa função (1 para cada indivíduo), reescreveu-se essa condição de parada em função do número de gerações que seriam necessárias para se alcançar essa quantidade de avaliações. Portanto, a condição de parada passou a ser até que 1000 gerações fossem consideradas, ou que o mínimo global fosse encontrado.\\
+	\end{itemize}
+	
+	\paragraph{} Para essa questão, em nenhuma das vezes que se executou o algoritmo, o mínimo global foi alcançado. A Figura \ref{melhores_fitness_5_exec_q03} mostra as melhores fitness encontradas em 5 rodadas distintas do algoritmo. Analisando algumas rodadas do algoritmo, notou-se que ele ficou preso durante um certo número de gerações em um mínimo local, conforme se nota na Figura \ref{media_fitness_q03}, a qual mostra a fitness média dos indivíduos em cada geração. Eventualmente, por meio de mutação e recombinação, novos indivíduos mais aptos são gerados, e o algoritmo consegue escapar do mínimo local. O comportamento observado sugere que após um número suficientemente alto de gerações, o mínimo global será alcançado.\\
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width = 0.9\textwidth]{Q03_melhores_fitness.jpg}
+		\caption{Melhores fitness encontradas em execuções independentes do algoritmo}
+		\label{melhores_fitness_5_exec_q03}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width = 0.9\textwidth]{Q03_media_fitness.jpg}
+		\caption{Média das fitness encontradas em cada geração, em uma execução do algoritmo}
+		\label{media_fitness_q03}
+	
+	\end{figure}
 	
 	\section*{Questão 4 (Bônus)}
 	
@@ -671,14 +741,14 @@ end
 		
 		\item[\textbf{6.}] \textbf{Inicialização}
 		
-		\paragraph{} A inicialização da população é feita de forma aleatória (preservando a condição de que um genótipo não contém elementos repetidos). Para tal, inicializou-se o primeiro indivíduo com genótipo $G_1 = [1 \quad 2 \quad 3 \quad 4 \quad 5 \quad 6 \quad 7 \quad 8 \quad]$ e os indivíduos subsequentes são gerados, trocando a posição de dois genes do indivíduo anterior. Isso é repetido até que se gere o tamanho da população desejada.\\
+		\paragraph{} A inicialização da população é feita de forma aleatória (preservando a condição de que um genótipo não contém elementos repetidos). Para tal, inicializou-se o primeiro indivíduo com genótipo $G_1 = [1 \quad 2 \quad 3 \quad 4 \quad 5 \quad 6 \quad 7 \quad 8]$ e os indivíduos subsequentes são gerados, trocando a posição de dois genes do indivíduo anterior. Isso é repetido até que se gere o tamanho da população desejada.\\
 		
 		\item[\textbf{7.}] \textbf{Condição de Parada}
 		
 		\paragraph{} O algoritmo encerra sua execução após se atingir um determinado número de gerações ou uma solução ótima seja encontrada.\\
 	\end{itemize}
 	
-	\paragraph{} O código, em Octave, que implementa a solução, é exposto a seguir:\\
+	\paragraph{} O código, em Octave, que implementa a solução, é exposto a seguir. O algoritmo foi executado 1000 vezes, sendo a geração média, na qual a solução ótima apareceu, igual a 5.55 ($\approx 6$), com desvio-padrão de $\approx 5.02$. \\
 	
 	\begin{lstlisting}
 clear all;
@@ -688,219 +758,228 @@ clc;
 N_pop = 100; % Tamanho da população
 N_ger = 20; % Quantidade de gerações
 N_col = 8; % Número de colunas do tabuleiro
-fitness = zeros(N_ger,N_pop); % Número de rainhas salvas
-n = 1; % Geração atual
+N_exec = 100; % Número de execuções independentes do algoritmo
 p_rec = 0.8;
 p_mut = 0.1;
-max_fitness = 0;
+ger_otimas = zeros(1,N_exec); % Armazena a geração em que a solução ótima ocorreu
 
-%% Inicialização aleatória dos genótipos
 
-P = zeros(N_pop, N_col);
+for t = 1:N_exec
 
-P(1,:) = 1:N_col;
+    fitness = zeros(N_ger,N_pop); % Número de rainhas salvas
+    n = 1; % Geração atual
+    max_fitness = 0;
+    %% Inicialização aleatória dos genótipos
 
-for i = 2:N_pop
+    P = zeros(N_pop, N_col);
 
-    P(i,:) = P((i-1),:);
+    P(1,:) = 1:N_col;
 
-    r1 = unidrnd(N_col);
-    r2 = unidrnd(N_col);
-    while (r2 == r1)
+    for i = 2:N_pop
+
+        P(i,:) = P((i-1),:);
+
+        r1 = unidrnd(N_col);
         r2 = unidrnd(N_col);
-    end
-    
-    aux = P(i,r1);
-    P(i,r1) = P(i, r2);
-    P(i,r2) = aux;
-end
-
-while (n <= N_ger) && (max_fitness ~= 8)
-
-    %% Decodificação em fenótipo e cálculo de fitness
-
-    F = zeros(N_col, N_col, N_pop);
-    for i = 1:size(P,1);
-
-        k = 1;
-        for j = 1:size(P,2);
-            
-            F(P(i,j), k, i) = 1;
-            k = k + 1;
-            
+        while (r2 == r1)
+            r2 = unidrnd(N_col);
         end
         
-        k = 1;
-
-        N_rainhas_salvas = 0;
-        for j = 1:size(F,2)
-
-            mask = zeros(N_col, N_col);
-            mask(P(i,j), k) = 1;
-            
-            [lin,col] = find(mask == 1);         
-            
-            for caso = 1:4
-                lin_aux = lin;
-                col_aux = col;
-
-                switch(caso)
-                    
-                    case 1 % Diagonal superior direita
-                    
-                        while (lin_aux > 1) && (col_aux < N_col)
-                            lin_aux = lin_aux - 1;
-                            col_aux = col_aux + 1;
-                            mask(lin_aux, col_aux) = 1;
-                        end
-
-                    case 2 % Diagonal superior esquerda
-            
-                        while (lin_aux > 1) && (col_aux > 1)
-                            lin_aux = lin_aux - 1;
-                            col_aux = col_aux - 1;
-                            mask(lin_aux, col_aux) = 1;
-                        end
-
-                    case 3 % Diagonal inferior esquerda
-
-                        while (lin_aux < N_col) && (col_aux > 1)
-                            lin_aux = lin_aux + 1;
-                            col_aux = col_aux - 1;
-                            mask(lin_aux, col_aux) = 1;
-                        end
-                    
-                    case 4 % Diagonal inferior direita
-
-                        while (lin_aux < N_col) && (col_aux < N_col)
-                            lin_aux = lin_aux + 1;
-                            col_aux = col_aux + 1;
-                            mask(lin_aux, col_aux) = 1;
-                        end
-                end
-            end
-            if ((sum(sum(mask .* F(:,:,i))) - 1) == 0) % Sem rainhas na diagonal
-                N_rainhas_salvas = N_rainhas_salvas + 1;
-            end
-            
-            k = k + 1;
-        end
-
-        fitness(n, i) = N_rainhas_salvas;
-
+        aux = P(i,r1);
+        P(i,r1) = P(i, r2);
+        P(i,r2) = aux;
     end
 
-    if max_fitness < max(fitness(n,:))
-        max_fitness = max(fitness(n,:));
-        opt = find(fitness(n,:) == max_fitness, 1);
-        F_otimo = F(:,:,opt);
-    end
+    while (n <= N_ger) && (max_fitness ~= 8)
 
-    opt5 = find(fitness(n,:) == 5, 1);
-    if ~isempty(opt5)
-        F_3 = F(:,:,opt5);
-    end
+        %% Decodificação em fenótipo e cálculo de fitness
 
-    %% Seleção de pais
+        F = zeros(N_col, N_col, N_pop);
+        for i = 1:size(P,1);
 
-    pdf_fitness = fitness(n,:) / sum(fitness(n,:));
-    cdf_fitness = cumsum(pdf_fitness);
-
-    % Algoritmo 'SUS'
-
-    i = 1;
-    membro_atual = i;
-    r = unifrnd(0, 1/N_pop);
-    reprodutores = zeros(1, N_pop);
-
-    while (membro_atual <= N_pop)
-        while (r <= cdf_fitness(i))
-            reprodutores(membro_atual) = i;
-            r = r + 1/N_pop;
-            membro_atual = membro_atual + 1;
-        end
-        i = i+1;
-    end
-
-    % Recombinação
-
-    P_filhos = zeros(size(P));
-    
-    for i = 1:2:(N_pop-1)
-
-        n_p1 = unidrnd(N_pop);
-        n_p2 = unidrnd(N_pop);
-        while (n_p2 == n_p1) % Sorteia novamente o segundo pai
-            n_p2 = unidrnd(N_pop);
-        end
-
-        p1 = P(reprodutores(n_p1), :);
-        p2 = P(reprodutores(n_p2), :);
-
-        r = unifrnd(0,1);
-        if (r < p_rec) % Haverá recombinação
-
-            % Crossover de 1 ponto            
-
-            q = unidrnd(size(P_filhos, 2) - 2) + 1; % Sorteia um número entre 2 e 18
-            P_filhos(i, 1:q) = p1(1:q);
-            P_filhos((i+1), 1:q) = p2(1:q);
-
-            contador_p1 = q; % Quantidade de genes copiados para o filho i
-            contador_p2 = contador_p1; % Quantidade de genes copiados para o filho (i+1)
-            idx = q + 1; % Próximo gene a ser analisado em cada pai
-
-            while (contador_p1 ~= N_col) || (contador_p2 ~= N_col) % Ainda não preencheu completamente os filhos
-                if (contador_p1 ~= length(p1)) % Filho i não preenchido totalmente
-                    if (isempty(find(P_filhos(i,:) == p2(idx), 1))) % Gene de permutação não repetido no filho i
-                        contador_p1 = contador_p1 + 1;
-                        P_filhos(i,contador_p1) = p2(idx); % Copia o gene do pai p2 para o filho i
-                    end
-                end
-                if (contador_p2 ~= length(p2)) % Filho (i+1) não preenchido totalmente
-                    if (isempty(find(P_filhos((i+1),:) == p1(idx), 1))) % Gene de permutação não repetido no filho (i+1)
-                        contador_p2 = contador_p2 + 1;
-                        P_filhos((i+1),contador_p2) = p1(idx); % Copia o gene do pai p1 para o filho (i+1)
-                    end
-                end
-
-                idx = idx + 1;
+            k = 1;
+            for j = 1:size(P,2);
                 
-                if (idx > N_col) % Percorreu todo genótipo de cada pai
-                    idx = 1; % Volta para o começo do genótipo de cada pai
-                end
+                F(P(i,j), k, i) = 1;
+                k = k + 1;
+                
             end
             
-        else % Copia os pais para os filhos; sem recombinação
-            P_filhos(i,:) = p1;
-            P_filhos((i+1),:) = p2;
-        end
-    end
-    
-    % Mutação
-    
-    r = unifrnd(0,1);
-    for i = 1:size(P_filhos, 1) % Percorre cada indivíduo
-        if (r < p_mut) % Haverá mutação no indivíduo
-            p1 = unidrnd(N_col);
-            p2 = unidrnd(N_col);
-            while (p2 == p1) % Sorteia novamente p2
-                p2 = unidrnd(N_col);
+            k = 1;
+
+            N_rainhas_salvas = 0;
+            for j = 1:size(F,2)
+
+                mask = zeros(N_col, N_col);
+                mask(P(i,j), k) = 1;
+                
+                [lin,col] = find(mask == 1);         
+                
+                for caso = 1:4
+                    lin_aux = lin;
+                    col_aux = col;
+
+                    switch(caso)
+                        
+                        case 1 % Diagonal superior direita
+                        
+                            while (lin_aux > 1) && (col_aux < N_col)
+                                lin_aux = lin_aux - 1;
+                                col_aux = col_aux + 1;
+                                mask(lin_aux, col_aux) = 1;
+                            end
+
+                        case 2 % Diagonal superior esquerda
+                
+                            while (lin_aux > 1) && (col_aux > 1)
+                                lin_aux = lin_aux - 1;
+                                col_aux = col_aux - 1;
+                                mask(lin_aux, col_aux) = 1;
+                            end
+
+                        case 3 % Diagonal inferior esquerda
+
+                            while (lin_aux < N_col) && (col_aux > 1)
+                                lin_aux = lin_aux + 1;
+                                col_aux = col_aux - 1;
+                                mask(lin_aux, col_aux) = 1;
+                            end
+                        
+                        case 4 % Diagonal inferior direita
+
+                            while (lin_aux < N_col) && (col_aux < N_col)
+                                lin_aux = lin_aux + 1;
+                                col_aux = col_aux + 1;
+                                mask(lin_aux, col_aux) = 1;
+                            end
+                    end
+                end
+                if ((sum(sum(mask .* F(:,:,i))) - 1) == 0) % Sem rainhas na diagonal
+                    N_rainhas_salvas = N_rainhas_salvas + 1;
+                end
+                
+                k = k + 1;
             end
-    
-            % Troca as posições de dois elementos
 
-            aux = P_filhos(i, p1); 
-            P_filhos(i, p1) = P_filhos(i, p2);
-            P_filhos(i, p2) = aux;
+            fitness(n, i) = N_rainhas_salvas;
+
         end
+
+        if max_fitness < max(fitness(n,:))
+            max_fitness = max(fitness(n,:));
+            opt = find(fitness(n,:) == max_fitness, 1);
+            F_otimo = F(:,:,opt);
+        end
+
+        opt5 = find(fitness(n,:) == 5, 1);
+        if ~isempty(opt5)
+            F_3 = F(:,:,opt5);
+        end
+
+        %% Seleção de pais
+
+        pdf_fitness = fitness(n,:) / sum(fitness(n,:));
+        cdf_fitness = cumsum(pdf_fitness);
+
+        % Algoritmo 'SUS'
+
+        i = 1;
+        membro_atual = i;
+        r = unifrnd(0, 1/N_pop);
+        reprodutores = zeros(1, N_pop);
+
+        while (membro_atual <= N_pop)
+            while (r <= cdf_fitness(i))
+                reprodutores(membro_atual) = i;
+                r = r + 1/N_pop;
+                membro_atual = membro_atual + 1;
+            end
+            i = i+1;
+        end
+
+        % Recombinação
+
+        P_filhos = zeros(size(P));
+        
+        for i = 1:2:(N_pop-1)
+
+            n_p1 = unidrnd(N_pop);
+            n_p2 = unidrnd(N_pop);
+            while (n_p2 == n_p1) % Sorteia novamente o segundo pai
+                n_p2 = unidrnd(N_pop);
+            end
+
+            p1 = P(reprodutores(n_p1), :);
+            p2 = P(reprodutores(n_p2), :);
+
+            r = unifrnd(0,1);
+            if (r < p_rec) % Haverá recombinação
+
+                % Crossover de 1 ponto            
+
+                q = unidrnd(size(P_filhos, 2) - 2) + 1; % Sorteia um número entre 2 e 18
+                P_filhos(i, 1:q) = p1(1:q);
+                P_filhos((i+1), 1:q) = p2(1:q);
+
+                contador_p1 = q; % Quantidade de genes copiados para o filho i
+                contador_p2 = contador_p1; % Quantidade de genes copiados para o filho (i+1)
+                idx = q + 1; % Próximo gene a ser analisado em cada pai
+
+                while (contador_p1 ~= N_col) || (contador_p2 ~= N_col) % Ainda não preencheu completamente os filhos
+                    if (contador_p1 ~= length(p1)) % Filho i não preenchido totalmente
+                        if (isempty(find(P_filhos(i,:) == p2(idx), 1))) % Gene de permutação não repetido no filho i
+                            contador_p1 = contador_p1 + 1;
+                            P_filhos(i,contador_p1) = p2(idx); % Copia o gene do pai p2 para o filho i
+                        end
+                    end
+                    if (contador_p2 ~= length(p2)) % Filho (i+1) não preenchido totalmente
+                        if (isempty(find(P_filhos((i+1),:) == p1(idx), 1))) % Gene de permutação não repetido no filho (i+1)
+                            contador_p2 = contador_p2 + 1;
+                            P_filhos((i+1),contador_p2) = p1(idx); % Copia o gene do pai p1 para o filho (i+1)
+                        end
+                    end
+
+                    idx = idx + 1;
+                    
+                    if (idx > N_col) % Percorreu todo genótipo de cada pai
+                        idx = 1; % Volta para o começo do genótipo de cada pai
+                    end
+                end
+                
+            else % Copia os pais para os filhos; sem recombinação
+                P_filhos(i,:) = p1;
+                P_filhos((i+1),:) = p2;
+            end
+        end
+        
+        % Mutação
+        
+        r = unifrnd(0,1);
+        for i = 1:size(P_filhos, 1) % Percorre cada indivíduo
+            if (r < p_mut) % Haverá mutação no indivíduo
+                p1 = unidrnd(N_col);
+                p2 = unidrnd(N_col);
+                while (p2 == p1) % Sorteia novamente p2
+                    p2 = unidrnd(N_col);
+                end
+        
+                % Troca as posições de dois elementos
+
+                aux = P_filhos(i, p1); 
+                P_filhos(i, p1) = P_filhos(i, p2);
+                P_filhos(i, p2) = aux;
+            end
+        end
+
+        %% Seleção dos sobreviventes
+
+        P = P_filhos; % Generacional
+                 
+        n = n + 1;
     end
 
-    %% Seleção dos sobreviventes
+    ger_otimas(t) = n-1;
 
-    P = P_filhos; % Generacional
-             
-    n = n + 1;
 end
 
 	\end{lstlisting}
