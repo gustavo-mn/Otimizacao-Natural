@@ -1,0 +1,364 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.11.18)  13 MAR 2016 17:33
+entering extended mode
+**capa.tex
+(capa.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+
+! LaTeX Error: Environment titlepage undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{titlepage}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \begin{flushleft}
+                     
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2--2
+[] 
+ []
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
+(Font)              using `OT1/cmr/bx/n' instead on input line 4.
+
+! Undefined control sequence.
+<recently read> \LARGE 
+                       
+l.4 ...GE Universidade Federal do Rio de Janeiro}}
+                                                  \\[0.5cm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (65.55658pt too wide) in paragraph at lines 4--4
+\OT1/cmr/bx/n/10 Universidade 
+ []
+
+
+Overfull \hbox (21.77072pt too wide) in paragraph at lines 4--4
+\OT1/cmr/bx/n/10 Fed- 
+ []
+
+
+Overfull \hbox (18.79156pt too wide) in paragraph at lines 4--4
+\OT1/cmr/bx/n/10 eral 
+ []
+
+
+Overfull \hbox (12.13882pt too wide) in paragraph at lines 4--4
+\OT1/cmr/bx/n/10 do 
+ []
+
+
+Overfull \hbox (17.56935pt too wide) in paragraph at lines 4--4
+\OT1/cmr/bx/n/10 Rio 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 4--4
+\OT1/cmr/bx/n/10 de 
+ []
+
+
+Overfull \hbox (36.8748pt too wide) in paragraph at lines 4--4
+\OT1/cmr/bx/n/10 Janeiro  
+ []
+
+! Undefined control sequence.
+<recently read> \LARGE 
+                       
+l.5 \textsc{\textbf{\LARGE COPPE}}
+                                  \\[0.5cm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (40.222pt too wide) in paragraph at lines 5--5
+[]\OT1/cmr/bx/sc/10 COPPE  
+ []
+
+! Undefined control sequence.
+<recently read> \LARGE 
+                       
+l.6 ...GE Programa de Engenharia El√©trica - PEE}}
+                                                  \\[0.5cm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no © in font cmbx10!
+
+Overfull \hbox (49.59694pt too wide) in paragraph at lines 6--6
+[]\OT1/cmr/bx/sc/10 Programa 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 6--6
+\OT1/cmr/bx/sc/10 de 
+ []
+
+
+Overfull \hbox (17.77768pt too wide) in paragraph at lines 6--6
+\OT1/cmr/bx/sc/10 En- 
+ []
+
+
+Overfull \hbox (21.24295pt too wide) in paragraph at lines 6--6
+\OT1/cmr/bx/sc/10 gen- 
+ []
+
+
+Overfull \hbox (25.49983pt too wide) in paragraph at lines 6--6
+\OT1/cmr/bx/sc/10 haria 
+ []
+
+
+Overfull \hbox (14.58325pt too wide) in paragraph at lines 6--6
+\OT1/cmr/bx/sc/10 El- 
+ []
+
+
+Overfull \hbox (23.10403pt too wide) in paragraph at lines 6--6
+\OT1/cmr/bx/sc/10 trica 
+ []
+
+
+Overfull \hbox (3.83331pt too wide) in paragraph at lines 6--6
+\OT1/cmr/bx/sc/10 - 
+ []
+
+
+Overfull \hbox (22.97209pt too wide) in paragraph at lines 6--6
+\OT1/cmr/bx/sc/10 PEE  
+ []
+
+! Undefined control sequence.
+<recently read> \LARGE 
+                       
+l.7 ...f{\LARGE Disciplina: Otimiza√ß√£o Natural}}
+                                                  \\[0.5cm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ß in font cmbx10!
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no £ in font cmbx10!
+
+Overfull \hbox (52.80663pt too wide) in paragraph at lines 7--7
+[]\OT1/cmr/bx/sc/10 Disciplina: 
+ []
+
+
+Overfull \hbox (45.53445pt too wide) in paragraph at lines 7--7
+\OT1/cmr/bx/sc/10 Otimizao 
+ []
+
+
+Overfull \hbox (22.89569pt too wide) in paragraph at lines 7--7
+\OT1/cmr/bx/sc/10 Nat- 
+ []
+
+
+Overfull \hbox (10.22217pt too wide) in paragraph at lines 7--7
+\OT1/cmr/bx/sc/10 u- 
+ []
+
+
+Overfull \hbox (13.52075pt too wide) in paragraph at lines 7--7
+\OT1/cmr/bx/sc/10 ral  
+ []
+
+! Undefined control sequence.
+<recently read> \LARGE 
+                       
+l.8 ...RGE Aluno: Gustavo Martins da Silva Nunes}}
+                                                  \\[0.5cm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (33.61093pt too wide) in paragraph at lines 8--8
+[]\OT1/cmr/bx/sc/10 Aluno: 
+ []
+
+
+Overfull \hbox (23.79985pt too wide) in paragraph at lines 8--8
+\OT1/cmr/bx/sc/10 Gus- 
+ []
+
+
+Overfull \hbox (21.24292pt too wide) in paragraph at lines 8--8
+\OT1/cmr/bx/sc/10 tavo 
+ []
+
+
+Overfull \hbox (25.07625pt too wide) in paragraph at lines 8--8
+\OT1/cmr/bx/sc/10 Mar- 
+ []
+
+
+Overfull \hbox (18.59155pt too wide) in paragraph at lines 8--8
+\OT1/cmr/bx/sc/10 tins 
+ []
+
+
+Overfull \hbox (11.97908pt too wide) in paragraph at lines 8--8
+\OT1/cmr/bx/sc/10 da 
+ []
+
+
+Overfull \hbox (23.79846pt too wide) in paragraph at lines 8--8
+\OT1/cmr/bx/sc/10 Silva 
+ []
+
+
+Overfull \hbox (31.58455pt too wide) in paragraph at lines 8--8
+\OT1/cmr/bx/sc/10 Nunes  
+ []
+
+! Undefined control sequence.
+<recently read> \LARGE 
+                       
+l.9 ...c{\textbf{\LARGE Professor: Jos√© Gabriel}}
+                                                  \\[0.5cm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no © in font cmbx10!
+
+Overfull \hbox (49.88446pt too wide) in paragraph at lines 9--9
+[]\OT1/cmr/bx/sc/10 Professor: 
+ []
+
+
+Overfull \hbox (16.23045pt too wide) in paragraph at lines 9--9
+\OT1/cmr/bx/sc/10 Jos 
+ []
+
+
+Overfull \hbox (37.41646pt too wide) in paragraph at lines 9--9
+\OT1/cmr/bx/sc/10 Gabriel  
+ []
+
+! Undefined control sequence.
+<recently read> \LARGE 
+                       
+l.10 ...c{\textbf{\LARGE Data: \date{15/03/2016}}}
+                                                  \\[6.5cm]%15/03/2016}}\\[6...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (27.66647pt too wide) in paragraph at lines 10--10
+[]\OT1/cmr/bx/sc/10 Data:  
+ []
+
+! Undefined control sequence.
+<recently read> \huge 
+                      
+l.14 \textsc{\textbf{\huge Lista 1 - Resolu√ß√£o}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ß in font cmbx10!
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no £ in font cmbx10!
+
+Overfull \hbox (24.70955pt too wide) in paragraph at lines 14--15
+ \OT1/cmr/bx/sc/10 Lista 
+ []
+
+
+Overfull \hbox (5.74997pt too wide) in paragraph at lines 14--15
+ \OT1/cmr/bx/sc/10 1 
+ []
+
+
+Overfull \hbox (3.83331pt too wide) in paragraph at lines 14--15
+ \OT1/cmr/bx/sc/10 - 
+ []
+
+
+Overfull \hbox (22.26515pt too wide) in paragraph at lines 14--15
+ \OT1/cmr/bx/sc/10 Res- 
+ []
+
+
+Overfull \hbox (21.08322pt too wide) in paragraph at lines 14--15
+ \OT1/cmr/bx/sc/10 oluo 
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{titlepage}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \end{titlepage}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+! Emergency stop.
+<*> capa.tex
+            
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 17 strings out of 493673
+ 178 string characters out of 3143953
+ 53455 words of memory out of 3000000
+ 3463 multiletter control sequences out of 15000+200000
+ 4249 words of font info for 16 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 16i,1n,11p,107b,178s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
