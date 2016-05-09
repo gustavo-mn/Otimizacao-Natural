@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.4.17)  2 MAY 2016 17:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.4.17)  9 MAY 2016 19:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -537,18 +537,18 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) (./lista_5.aux)
 \openout1 = `lista_5.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count119
@@ -576,53 +576,54 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 52.
+LaTeX Font Info:    Try loading font information for U+msa on input line 72.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 52.
+LaTeX Font Info:    Try loading font information for U+msb on input line 72.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 75.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 95.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 75.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 83.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 95.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 103.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 83.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 103.
  [1] [2]
-Overfull \hbox (2.19391pt too wide) in paragraph at lines 166--167
+Overfull \hbox (2.19391pt too wide) in paragraph at lines 186--187
  [] \OT1/cmr/m/n/10 A Fi-gura 1[] exibe um gr^^Safico das me-lho-res fit-ness e
 n-con-tra-das em cada execu^^Xc~ao
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
@@ -636,7 +637,7 @@ ed-to.pdf>
 (epstopdf)                    size: 10281 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Imagens/Q01_melhores_fit
 ness-eps-converted-to.pdf ./Imagens/Q01_melhores_fitness.eps>
-(epstopdf)             \includegraphics on input line 170.
+(epstopdf)             \includegraphics on input line 190.
 Package epstopdf Info: Output file is already uptodate.
 
 <./Imagens/Q01_melhores_fitness-eps-converted-to.pdf, id=26, 963.6pt x 683.5537
@@ -645,7 +646,7 @@ File: ./Imagens/Q01_melhores_fitness-eps-converted-to.pdf Graphic file (type pd
 f)
  <use ./Imagens/Q01_melhores_fitness-eps-converted-to.pdf>
 Package pdftex.def Info: ./Imagens/Q01_melhores_fitness-eps-converted-to.pdf us
-ed on input line 170.
+ed on input line 190.
 (pdftex.def)             Requested size: 345.0pt x 244.73367pt.
 Package epstopdf Info: Source file: <./Imagens/Q01_hist_melhores_fitness.eps>
 (epstopdf)                    date: 2016-05-02 16:28:13
@@ -656,7 +657,7 @@ nverted-to.pdf>
 (epstopdf)                    size: 3788 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Imagens/Q01_hist_melhore
 s_fitness-eps-converted-to.pdf ./Imagens/Q01_hist_melhores_fitness.eps>
-(epstopdf)             \includegraphics on input line 177.
+(epstopdf)             \includegraphics on input line 197.
 Package epstopdf Info: Output file is already uptodate.
 
 <./Imagens/Q01_hist_melhores_fitness-eps-converted-to.pdf, id=27, 963.6pt x 683
@@ -665,11 +666,11 @@ File: ./Imagens/Q01_hist_melhores_fitness-eps-converted-to.pdf Graphic file (ty
 pe pdf)
  <use ./Imagens/Q01_hist_melhores_fitness-eps-converted-to.pdf>
 Package pdftex.def Info: ./Imagens/Q01_hist_melhores_fitness-eps-converted-to.p
-df used on input line 177.
+df used on input line 197.
 (pdftex.def)             Requested size: 345.0pt x 244.73367pt.
 
 [4 <./Imagens/Q01_melhores_fitness-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
@@ -682,7 +683,7 @@ to.pdf>
 (epstopdf)                    size: 10232 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Imagens/Q01_geracao_otim
 a-eps-converted-to.pdf ./Imagens/Q01_geracao_otima.eps>
-(epstopdf)             \includegraphics on input line 186.
+(epstopdf)             \includegraphics on input line 206.
 Package epstopdf Info: Output file is already uptodate.
 
 <./Imagens/Q01_geracao_otima-eps-converted-to.pdf, id=35, 963.6pt x 683.55376pt
@@ -690,7 +691,7 @@ Package epstopdf Info: Output file is already uptodate.
 File: ./Imagens/Q01_geracao_otima-eps-converted-to.pdf Graphic file (type pdf)
  <use ./Imagens/Q01_geracao_otima-eps-converted-to.pdf>
 Package pdftex.def Info: ./Imagens/Q01_geracao_otima-eps-converted-to.pdf used 
-on input line 186.
+on input line 206.
 (pdftex.def)             Requested size: 345.0pt x 244.73367pt.
  [5 <./Imagens/Q01_hist_melhores_fitness-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./Imagens/Q01_hist_geracao_otima.eps>
@@ -702,7 +703,7 @@ rted-to.pdf>
 (epstopdf)                    size: 3904 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Imagens/Q01_hist_geracao
 _otima-eps-converted-to.pdf ./Imagens/Q01_hist_geracao_otima.eps>
-(epstopdf)             \includegraphics on input line 193.
+(epstopdf)             \includegraphics on input line 213.
 Package epstopdf Info: Output file is already uptodate.
 
 <./Imagens/Q01_hist_geracao_otima-eps-converted-to.pdf, id=42, 963.6pt x 683.55
@@ -711,56 +712,10 @@ File: ./Imagens/Q01_hist_geracao_otima-eps-converted-to.pdf Graphic file (type
 pdf)
  <use ./Imagens/Q01_hist_geracao_otima-eps-converted-to.pdf>
 Package pdftex.def Info: ./Imagens/Q01_hist_geracao_otima-eps-converted-to.pdf 
-used on input line 193.
+used on input line 213.
 (pdftex.def)             Requested size: 345.0pt x 244.73367pt.
  [6 <./Imagens/Q01_geracao_otima-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
-
- []
-
-[7 <./Imagens/Q01_hist_geracao_otima-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--211
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
-
- []
-
-[8]
-Overfull \hbox (0.58391pt too wide) in paragraph at lines 216--217
- [] \OT1/cmr/m/n/10 Au-men-tar es-ses par^ametros po-dem ser fei-tos, quando o 
-re-sul-tado das muta^^Xc~oes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
@@ -769,45 +724,158 @@ Underfull \hbox (badness 10000) in paragraph at lines 222--223
 
  []
 
-[9]
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
+
+ []
+
+[7 <./Imagens/Q01_hist_geracao_otima-eps-converted-to.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
  []
 
-[10] (./lista_5.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
+
+ []
+
+[8]
+Overfull \hbox (0.58391pt too wide) in paragraph at lines 236--237
+ [] \OT1/cmr/m/n/10 Au-men-tar es-ses par^ametros po-dem ser fei-tos, quando o 
+re-sul-tado das muta^^Xc~oes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--261
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 264--265
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 276--277
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 280--281
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
+
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 289.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+) [12] [13] [14]
+(./lista_5.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 7450 strings out of 493304
- 104515 string characters out of 6139871
- 430958 words of memory out of 5000000
- 10766 multiletter control sequences out of 15000+600000
- 11245 words of font info for 43 fonts, out of 8000000 for 9000
+ 7611 strings out of 493304
+ 106426 string characters out of 6139871
+ 430984 words of memory out of 5000000
+ 10919 multiletter control sequences out of 15000+600000
+ 12538 words of font info for 48 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,6n,40p,1816b,2578s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on lista_5.pdf (11 pages, 196222 bytes).
+ 42i,6n,40p,1816b,2579s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on lista_5.pdf (15 pages, 243607 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
+ 137 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
