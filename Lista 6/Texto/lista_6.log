@@ -1,15 +1,13 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.4.17)  16 MAY 2016 00:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.1)  16 MAY 2016 17:47
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**lista_6.tex
-(./lista_6.tex
-LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 78 languages loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
-Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+**./lista_6.tex
+(lista_6.tex
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 69 languages loaded.
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -23,24 +21,25 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2008/03/30 v1.1d Input encoding file
+) ("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.st
+y"
+Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+ ("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
-File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00BB (decimal 187)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C0 (decimal 192)
@@ -161,6 +160,10 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+016F (decimal 367)
    defining Unicode char U+0170 (decimal 368)
    defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
    defining Unicode char U+0178 (decimal 376)
    defining Unicode char U+0179 (decimal 377)
    defining Unicode char U+017A (decimal 378)
@@ -168,6 +171,10 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+017C (decimal 380)
    defining Unicode char U+017D (decimal 381)
    defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+200C (decimal 8204)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
@@ -186,10 +193,12 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
-File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00B8 (decimal 184)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C5 (decimal 197)
@@ -207,6 +216,14 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+0142 (decimal 322)
    defining Unicode char U+0152 (decimal 338)
    defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
    defining Unicode char U+2018 (decimal 8216)
@@ -217,8 +234,8 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
-File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -240,62 +257,79 @@ Now handling font encoding U ...
    defining Unicode char U+2026 (decimal 8230)
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
-))
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2013/12/03 3.9h The Babel package
+)) ("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.s
+ty"
+Package: babel 2016/01/08 3.9n The Babel package
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/portuges.ldf
+*************************************
+* Local config file bblopts.cfg used
+*
+
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\bblopts.c
+fg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-portuges\por
+tuges.ldf"
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2013/12/03 3.9h Babel common definitions
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2016/01/08 3.9n Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
 \l@brazil = a dialect from \language\l@portuges 
 Package babel Info: Making " an active character on input line 145.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/mh/mathtools.sty
-Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mathtools\mathtool
+s.sty"
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.st
+y"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+) ("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count89
 \calc@Bcount=\count90
 \calc@Adimen=\dimen104
 \calc@Bdimen=\dimen105
 \calc@Askip=\skip43
 \calc@Bskip=\skip44
-LaTeX Info: Redefining \setlength on input line 76.
-LaTeX Info: Redefining \addtolength on input line 77.
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count91
 \calc@Cskip=\skip45
 )
-(/usr/share/texlive/texmf-dist/tex/latex/mh/mhsetup.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mathtools\mhsetup.
+sty"
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.st
+y"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip46
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.st
+y"
 Package: amstext 2000/06/29 v2.01
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks17
 \ex@=\dimen106
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen107
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count92
@@ -336,6 +370,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \g_MT_multlinerow_int=\count104
@@ -348,27 +384,33 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen120
 \l_MT_below_shortintertext_sep=\dimen121
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.
+sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.
+sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\graphics.
+cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 94.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.
+def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infware
+rr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds
+.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count105
@@ -376,15 +418,18 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen122
 \Gin@req@width=\dimen123
 )
-(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\subcaption
+.sty"
+Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.st
+y"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.s
+ty"
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen124
 \captionmargin@=\dimen125
 \captionwidth=\dimen126
@@ -398,28 +443,36 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \c@subfigure=\count107
 \c@subtable=\count108
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.
+sty"
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-
+base.sty"
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.st
+y"
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefin
+ekeys.sty"
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions
+.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetke
+ys.sty"
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmd
+s.sty"
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluate
+x.sty"
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -428,11 +481,13 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexc
+mds.sty"
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.s
+ty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -445,12 +500,8 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-)))
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+))
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count109
 \float@exts=\toks22
@@ -458,7 +509,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks23
 \@floatcapt=\box29
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.
+sty"
 \lst@mode=\count110
 \lst@gtempboxa=\box30
 \lst@token=\toks24
@@ -472,25 +524,29 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \lst@lineno=\count115
 \lst@maxwidth=\dimen134
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.s
+ty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count116
 \lst@skipnumbers=\count117
 \lst@framebox=\box31
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2013/08/26 1.5b listings configuration
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.
+cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
-Package: listings 2013/08/26 1.5b (Carsten Heinz)
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/courier.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\courier.sty
+"
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
-(/usr/share/texlive/texmf-dist/tex/latex/eqnarray/eqnarray.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\eqnarray\eqnarray.
+sty"
 equationarray 1.3 <December 1, 2010>
 Package: eqnarray 
-(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen135
 \extrarowheight=\dimen136
 \NC@list=\toks25
@@ -499,17 +555,18 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 )
 \@eqargcnt=\count118
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.
+sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\color.cfg
+"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -523,18 +580,21 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
-File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\dvipsnam.
+def"
+File: dvipsnam.def 2014/10/14 v3.0j Driver-dependent file (DPC,SPQR)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\verbatim.sty
+"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks26
 \verbatim@line=\toks27
 \verbatim@in@stream=\read1
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2013/08/26 1.5b listings language file
-) (./lista_6.aux)
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.
+sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+) (lista_6.aux)
 \openout1 = `lista_6.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
@@ -549,7 +609,9 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
 LaTeX Font Info:    ... okay on input line 64.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
 LaTeX Font Info:    ... okay on input line 64.
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
+ii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count119
 \scratchdimen=\dimen137
@@ -589,12 +651,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--75
  []
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 76.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 76.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Underfull \hbox (badness 10000) in paragraph at lines 76--77
@@ -603,7 +664,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{C:/Users/gusta/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
@@ -639,64 +700,329 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--97
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
+)
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 125.
+
+
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 125.
+
+[3] [4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
+
+ []
+
+Package epstopdf Info: Source file: <./Imagens/Q02_maximos_fitness_100_ger_nao_
+memetico.eps>
+(epstopdf)                    date: 2016-05-16 17:18:39
+(epstopdf)                    size: 14502 bytes
+(epstopdf)             Output file: <./Imagens/Q02_maximos_fitness_100_ger_nao_
+memetico-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-16 17:23:24
+(epstopdf)                    size: 9395 bytes
+(epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_maximos_fitne
+ss_100_ger_nao_memetico-eps-converted-to.pdf ./Imagens/Q02_maximos_fitness_100_
+ger_nao_memetico.eps>
+(epstopdf)             \includegraphics on input line 298.
+Package epstopdf Info: Output file is already uptodate.
+
+<./Imagens/Q02_maximos_fitness_100_ger_nao_memetico-eps-converted-to.pdf, id=29
+, 963.6pt x 683.55376pt>
+File: ./Imagens/Q02_maximos_fitness_100_ger_nao_memetico-eps-converted-to.pdf G
+raphic file (type pdf)
+
+<use ./Imagens/Q02_maximos_fitness_100_ger_nao_memetico-eps-converted-to.pdf>
+Package pdftex.def Info: ./Imagens/Q02_maximos_fitness_100_ger_nao_memetico-eps
+-converted-to.pdf used on input line 298.
+(pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
+
+[7]
+Package epstopdf Info: Source file: <./Imagens/Q02_minimos_fitness_100_ger_nao_
+memetico.eps>
+(epstopdf)                    date: 2016-05-16 17:19:03
+(epstopdf)                    size: 14500 bytes
+(epstopdf)             Output file: <./Imagens/Q02_minimos_fitness_100_ger_nao_
+memetico-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-16 17:23:25
+(epstopdf)                    size: 9442 bytes
+(epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_minimos_fitne
+ss_100_ger_nao_memetico-eps-converted-to.pdf ./Imagens/Q02_minimos_fitness_100_
+ger_nao_memetico.eps>
+(epstopdf)             \includegraphics on input line 305.
+Package epstopdf Info: Output file is already uptodate.
+
+<./Imagens/Q02_minimos_fitness_100_ger_nao_memetico-eps-converted-to.pdf, id=34
+, 963.6pt x 683.55376pt>
+File: ./Imagens/Q02_minimos_fitness_100_ger_nao_memetico-eps-converted-to.pdf G
+raphic file (type pdf)
+
+<use ./Imagens/Q02_minimos_fitness_100_ger_nao_memetico-eps-converted-to.pdf>
+Package pdftex.def Info: ./Imagens/Q02_minimos_fitness_100_ger_nao_memetico-eps
+-converted-to.pdf used on input line 305.
+(pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
+Package epstopdf Info: Source file: <./Imagens/Q02_medias_fitness_100_ger_nao_m
+emetico.eps>
+(epstopdf)                    date: 2016-05-16 17:19:40
+(epstopdf)                    size: 14504 bytes
+(epstopdf)             Output file: <./Imagens/Q02_medias_fitness_100_ger_nao_m
+emetico-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-16 17:23:25
+(epstopdf)                    size: 10106 bytes
+(epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_medias_fitnes
+s_100_ger_nao_memetico-eps-converted-to.pdf ./Imagens/Q02_medias_fitness_100_ge
+r_nao_memetico.eps>
+(epstopdf)             \includegraphics on input line 312.
+Package epstopdf Info: Output file is already uptodate.
+
+<./Imagens/Q02_medias_fitness_100_ger_nao_memetico-eps-converted-to.pdf, id=35,
+ 963.6pt x 683.55376pt>
+File: ./Imagens/Q02_medias_fitness_100_ger_nao_memetico-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use ./Imagens/Q02_medias_fitness_100_ger_nao_memetico-eps-converted-to.pdf>
+Package pdftex.def Info: ./Imagens/Q02_medias_fitness_100_ger_nao_memetico-eps-
+converted-to.pdf used on input line 312.
+(pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
+
+[8 <./Imagens/Q02_maximos_fitness_100_ger_nao_memetico-eps-converted-to.pdf> <.
+/Imagens/Q02_minimos_fitness_100_ger_nao_memetico-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
+
+ []
+
+Package epstopdf Info: Source file: <./Imagens/Q02_maximos_fitness_100_ger_bald
+win.eps>
+(epstopdf)                    date: 2016-05-16 17:29:07
+(epstopdf)                    size: 10579 bytes
+(epstopdf)             Output file: <./Imagens/Q02_maximos_fitness_100_ger_bald
+win-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-16 17:40:12
+(epstopdf)                    size: 5465 bytes
+(epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_maximos_fitne
+ss_100_ger_baldwin-eps-converted-to.pdf ./Imagens/Q02_maximos_fitness_100_ger_b
+aldwin.eps>
+(epstopdf)             \includegraphics on input line 321.
+Package epstopdf Info: Output file is already uptodate.
+
+<./Imagens/Q02_maximos_fitness_100_ger_baldwin-eps-converted-to.pdf, id=47, 963
+.6pt x 683.55376pt>
+File: ./Imagens/Q02_maximos_fitness_100_ger_baldwin-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use ./Imagens/Q02_maximos_fitness_100_ger_baldwin-eps-converted-to.pdf>
+Package pdftex.def Info: ./Imagens/Q02_maximos_fitness_100_ger_baldwin-eps-conv
+erted-to.pdf used on input line 321.
+(pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
+
+[9 <./Imagens/Q02_medias_fitness_100_ger_nao_memetico-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./Imagens/Q02_minimos_fitness_100_ger_bald
+win.eps>
+(epstopdf)                    date: 2016-05-16 17:29:42
+(epstopdf)                    size: 10577 bytes
+(epstopdf)             Output file: <./Imagens/Q02_minimos_fitness_100_ger_bald
+win-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-16 17:40:13
+(epstopdf)                    size: 5424 bytes
+(epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_minimos_fitne
+ss_100_ger_baldwin-eps-converted-to.pdf ./Imagens/Q02_minimos_fitness_100_ger_b
+aldwin.eps>
+(epstopdf)             \includegraphics on input line 328.
+Package epstopdf Info: Output file is already uptodate.
+
+<./Imagens/Q02_minimos_fitness_100_ger_baldwin-eps-converted-to.pdf, id=55, 963
+.6pt x 683.55376pt>
+File: ./Imagens/Q02_minimos_fitness_100_ger_baldwin-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use ./Imagens/Q02_minimos_fitness_100_ger_baldwin-eps-converted-to.pdf>
+Package pdftex.def Info: ./Imagens/Q02_minimos_fitness_100_ger_baldwin-eps-conv
+erted-to.pdf used on input line 328.
+(pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
+Package epstopdf Info: Source file: <./Imagens/Q02_medias_fitness_100_ger_baldw
+in.eps>
+(epstopdf)                    date: 2016-05-16 17:29:53
+(epstopdf)                    size: 10581 bytes
+(epstopdf)             Output file: <./Imagens/Q02_medias_fitness_100_ger_baldw
+in-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-16 17:40:13
+(epstopdf)                    size: 5585 bytes
+(epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_medias_fitnes
+s_100_ger_baldwin-eps-converted-to.pdf ./Imagens/Q02_medias_fitness_100_ger_bal
+dwin.eps>
+(epstopdf)             \includegraphics on input line 335.
+Package epstopdf Info: Output file is already uptodate.
+
+<./Imagens/Q02_medias_fitness_100_ger_baldwin-eps-converted-to.pdf, id=56, 963.
+6pt x 683.55376pt>
+File: ./Imagens/Q02_medias_fitness_100_ger_baldwin-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use ./Imagens/Q02_medias_fitness_100_ger_baldwin-eps-converted-to.pdf>
+Package pdftex.def Info: ./Imagens/Q02_medias_fitness_100_ger_baldwin-eps-conve
+rted-to.pdf used on input line 335.
+(pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
+
+[10 <./Imagens/Q02_maximos_fitness_100_ger_baldwin-eps-converted-to.pdf> <./Ima
+gens/Q02_minimos_fitness_100_ger_baldwin-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
+
+ []
+
+Package epstopdf Info: Source file: <./Imagens/Q02_maximos_fitness_100_ger_lama
+rck.eps>
+(epstopdf)                    date: 2016-05-16 17:38:58
+(epstopdf)                    size: 13866 bytes
+(epstopdf)             Output file: <./Imagens/Q02_maximos_fitness_100_ger_lama
+rck-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-16 17:40:14
+(epstopdf)                    size: 8850 bytes
+(epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_maximos_fitne
+ss_100_ger_lamarck-eps-converted-to.pdf ./Imagens/Q02_maximos_fitness_100_ger_l
+amarck.eps>
+(epstopdf)             \includegraphics on input line 344.
+Package epstopdf Info: Output file is already uptodate.
+
+<./Imagens/Q02_maximos_fitness_100_ger_lamarck-eps-converted-to.pdf, id=68, 963
+.6pt x 683.55376pt>
+File: ./Imagens/Q02_maximos_fitness_100_ger_lamarck-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use ./Imagens/Q02_maximos_fitness_100_ger_lamarck-eps-converted-to.pdf>
+Package pdftex.def Info: ./Imagens/Q02_maximos_fitness_100_ger_lamarck-eps-conv
+erted-to.pdf used on input line 344.
+(pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
+
+[11 <./Imagens/Q02_medias_fitness_100_ger_baldwin-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./Imagens/Q02_minimos_fitness_100_ger_lama
+rck.eps>
+(epstopdf)                    date: 2016-05-16 17:39:17
+(epstopdf)                    size: 13864 bytes
+(epstopdf)             Output file: <./Imagens/Q02_minimos_fitness_100_ger_lama
+rck-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-16 17:40:14
+(epstopdf)                    size: 8838 bytes
+(epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_minimos_fitne
+ss_100_ger_lamarck-eps-converted-to.pdf ./Imagens/Q02_minimos_fitness_100_ger_l
+amarck.eps>
+(epstopdf)             \includegraphics on input line 351.
+Package epstopdf Info: Output file is already uptodate.
+
+<./Imagens/Q02_minimos_fitness_100_ger_lamarck-eps-converted-to.pdf, id=76, 963
+.6pt x 683.55376pt>
+File: ./Imagens/Q02_minimos_fitness_100_ger_lamarck-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use ./Imagens/Q02_minimos_fitness_100_ger_lamarck-eps-converted-to.pdf>
+Package pdftex.def Info: ./Imagens/Q02_minimos_fitness_100_ger_lamarck-eps-conv
+erted-to.pdf used on input line 351.
+(pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
+Package epstopdf Info: Source file: <./Imagens/Q02_medias_fitness_100_ger_lamar
+ck.eps>
+(epstopdf)                    date: 2016-05-16 17:40:01
+(epstopdf)                    size: 13868 bytes
+(epstopdf)             Output file: <./Imagens/Q02_medias_fitness_100_ger_lamar
+ck-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-16 17:40:15
+(epstopdf)                    size: 9484 bytes
+(epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_medias_fitnes
+s_100_ger_lamarck-eps-converted-to.pdf ./Imagens/Q02_medias_fitness_100_ger_lam
+arck.eps>
+(epstopdf)             \includegraphics on input line 358.
+Package epstopdf Info: Output file is already uptodate.
+
+<./Imagens/Q02_medias_fitness_100_ger_lamarck-eps-converted-to.pdf, id=77, 963.
+6pt x 683.55376pt>
+File: ./Imagens/Q02_medias_fitness_100_ger_lamarck-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use ./Imagens/Q02_medias_fitness_100_ger_lamarck-eps-converted-to.pdf>
+Package pdftex.def Info: ./Imagens/Q02_medias_fitness_100_ger_lamarck-eps-conve
+rted-to.pdf used on input line 358.
+(pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
+
+[12 <./Imagens/Q02_maximos_fitness_100_ger_lamarck-eps-converted-to.pdf> <./Ima
+gens/Q02_minimos_fitness_100_ger_lamarck-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
+
+ []
+
+[13 <./Imagens/Q02_medias_fitness_100_ger_lamarck-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 379--380
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 395--396
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
 
  []
 
-[4] [5] (./lista_6.aux) ) 
+[15] (lista_6.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6481 strings out of 493304
- 93591 string characters out of 6139871
- 214984 words of memory out of 5000000
- 9833 multiletter control sequences out of 15000+600000
- 7576 words of font info for 29 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 42i,5n,40p,1408b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
-7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmti10.pfb>
-Output written on lista_6.pdf (5 pages, 138710 bytes).
+ 7513 strings out of 493634
+ 109764 string characters out of 3135240
+ 399310 words of memory out of 3000000
+ 10768 multiletter control sequences out of 15000+200000
+ 10676 words of font info for 41 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 42i,6n,40p,1410b,2579s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/gusta/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/gusta/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/g
+usta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi8.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/gusta/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/gusta/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gusta/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Use
+rs/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8
+.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmti10.pfb>
+Output written on lista_6.pdf (15 pages, 267648 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 152 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

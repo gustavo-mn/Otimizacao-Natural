@@ -95,7 +95,270 @@
 
 \textbf{Implement a simple memetic algorithm using a single iteration of a bit-flipping local search within the code for the SGA you developed for One-Max in Chapter 3. \textit{Before} you run the experiment, justify whether you think steepest or greedy ascent will be most efficient for this problem.}\\
 
-\paragraph{}
+\paragraph{} O código, implementado em MATLAB, encontra-se exibido abaixo:\\
+
+\begin{lstlisting}
+
+clear all
+close all
+clc
+
+N_pop = 100; % Tamanho da população
+L = 25; % Tamanho do genótipo
+p_mut = 1/L; % Probabilidade de mutação
+p_rec = 0.7; % Probabilidade de recombinação
+N_ger = 100; % Número máximo de gerações
+T = 10; % Quantidade de rodadas do algoritmo
+abordagem = 'B'; % Abordagem de Baldwin ou de Lamarck na busca local
+memetico = 1; % Decide se o algoritmo será memetico ou não
+
+for t=1:T
+
+    n = 1; % Geração atual
+    fitness = zeros(N_ger,N_pop); % Vetor de fitness da população
+    max_fitness = zeros(1,N_ger); % Vetor com a melhor fitness encontrada em cada geração
+    min_fitness = zeros(1,N_ger); % Vetor com a pior fitness encontrada em cada geração
+    media_fitness = zeros(1,N_ger); % Vetor com a média das fitness encontrada em cada geração
+
+    P = unidrnd(2, [L, N_pop]) - 1; % Inicialização aleatória da população
+
+    while (n <= N_ger)
+        %% Cálculo de fitness
+        
+        fitness(n,:) = sum(P,1); % Cálculo das fitness de cada indivíduo
+        
+        max_fitness(n) = max(fitness(n,:));
+        min_fitness(n) = min(fitness(n,:));
+        media_fitness(n) = mean(fitness(n,:));
+
+        if max_fitness(n) == 25 % Valor máximo de fitness é 25
+            break;
+        end
+        
+        if memetico % Aplica busca local
+        
+            fitness_melhorada = fitness(n,:); % Vetor de fitness após a busca local
+            P_aux = P;
+            
+            switch (abordagem)
+                case 'B' % Abordagem de Baldwin
+                    for i = 1:size(P,1)
+                        P_aux(i,:) = ~P_aux(i,:); % Inverte o valor dos bits correspondentes em cada indivíduo
+                        
+                        fitness_aux = sum(P_aux,1); % Calcula a fitness após modificação do bit i de cada indivíduo
+                        
+                        % A fitness de cada indivíduo é sempre a melhor encontrada até então, para cada um
+                        
+                        fitness_melhorada(fitness_aux > fitness_melhorada) = fitness_aux(fitness_aux > fitness_melhorada);
+                        
+                        P_aux = P; % Reseta a população para a original, de forma a alterar o próximo bit
+                    end
+                    
+                case 'L' % Abordagem de Lamarck
+                    P_melhores = P;
+                    for i = 1:size(P,1)
+                        P_aux(i,:) = ~P_aux(i,:); % Inverte o valor dos bits correspondentes em cada indivíduo
+                        
+                        fitness_aux = sum(P_aux,1); % Calcula a fitness após modificação do bit i de cada indivíduo
+                        
+                        % A fitness de cada indivíduo é sempre a melhor encontrada até então, para cada um
+                        
+                        fitness_melhorada(fitness_aux > fitness_melhorada) = fitness_aux(fitness_aux > fitness_melhorada);
+                        
+                        P_melhores(i, (fitness_aux > fitness_melhorada)) = P_aux(i, (fitness_aux > fitness_melhorada));
+                        
+                        P_aux = P; % Reseta a população para a original, de forma a alterar o próximo bit
+                    end
+                    
+                    P = P_melhores; % Muda o genótipo para os indivíduos melhorados
+            end
+        end
+        %% Seleção de pais
+
+        % Probabilidade proporcional ao fitness
+        
+        if memetico
+            pdf_fitness = fitness_melhorada/sum(fitness_melhorada);
+            cdf_fitness = cumsum(pdf_fitness);
+        else
+            pdf_fitness = fitness(n,:)/sum(fitness(n,:));
+            cdf_fitness = cumsum(pdf_fitness);
+        end
+        
+        % Algoritmo SUS
+
+        i = 1;
+        membro_atual = i;
+        r = unifrnd(0, 1/N_pop);    
+        reprodutores = zeros(1,N_pop);
+
+        while (membro_atual <= N_pop)
+            while (r <= cdf_fitness(i))
+                reprodutores(membro_atual) = i;
+                r = r + 1/N_pop;
+                membro_atual = membro_atual + 1; 
+            end
+            i = i + 1;
+        end
+
+        % Reprodução
+
+        P_new = zeros(size(P)); % Nova geração
+
+        for i = 1:2:(size(P,2) - 1)
+            
+            p1 = unidrnd(length(reprodutores));
+            p2 = unidrnd(length(reprodutores));
+
+            while (p2 == p1)
+                p2 = unidrnd(length(reprodutores)); % Evita que a mesma posição do vetor de reprodutores seja sorteada
+            end
+
+            r = unifrnd(0,1);
+            
+            if (r < p_rec) % Haverá recombinação
+                c = unidrnd(19); % Define o ponto de corte para recombinação
+                
+                P_new(1:c, i) = P(1:c, reprodutores(p1));
+                P_new((c+1):end, i) = P((c+1):end, reprodutores(p2));
+                P_new(1:c, (i+1)) = P(1:c, reprodutores(p2));
+                P_new((c+1):end, (i+1)) = P((c+1):end, reprodutores(p1));
+
+            else % Os pais serão somente copiados para a geração seguinte
+                
+                P_new(:, i) = P(:, reprodutores(p1));
+                P_new(:, (i+1)) = P(:, reprodutores(p2));
+
+            end
+        end
+
+        % Mutação bit a bit
+
+        for j = 1:size(P_new, 2)
+            for i = 1:size(P_new, 1)
+                r = unifrnd(0,1);
+                
+                if (r < p_mut) % Haverá mutação
+                    if P_new(i,j) == 0
+                        P_new(i,j) = 1;
+                    else
+                        P_new(i,j) = 0;
+                    end
+                end
+            end
+        end
+
+        %% Seleção dos sobreviventes    
+
+        P = P_new; % Seleção Generacional
+        n = n + 1;
+    end
+
+    if (n < N_ger)
+        fitness = fitness(1:n,:);
+        max_fitness = max_fitness(1:n);
+        min_fitness = min_fitness(1:n);
+        media_fitness = media_fitness(1:n);
+        geracoes_otimas(t).n = n;
+    else
+        geracoes_otimas(t).n = N_ger;
+    end
+    
+    geracoes_otimas(t).maximos = max_fitness;
+    geracoes_otimas(t).minimos = min_fitness;
+    geracoes_otimas(t).medias = media_fitness;
+end
+
+if memetico
+
+    if exist(['dados_questao_2_' num2str(N_ger) '_geracoes_' abordagem '.mat'], 'file')
+        delete(['dados_questao_2_' num2str(N_ger) '_geracoes_' abordagem '.mat'])
+    end
+    
+    save(['dados_questao_2_' num2str(N_ger) '_geracoes_' abordagem '.mat'], 'geracoes_otimas');
+
+else
+    
+    if exist('dados_questao_2_nao_memetico.mat','file')
+        delete('dados_questao_2_nao_memetico.mat')
+    end
+    
+    save('dados_questao_2_nao_memetico.mat', 'geracoes_otimas');
+end
+    
+
+\end{lstlisting}
+
+\paragraph{} Nessa questão, foi adotada tanto a abordagem de Baldwin, ou seja, as melhorias encontradas por meio da busca local não foram incorporadas ao genótipo dos indivíduos, e sim, somente utilizadas como novos valores da função de fitness dos indivíduos originais (impactando, portanto, na seleção de pais), quanto a abordagem de Lamarck, na qual as melhorias são incorporadas ao genótipo do indivíduo, alterando-o (impactanto, agora, não só na seleção de pais, como também na recombinação e mutação que gerarão os filhos). Além disso, todos os vizinhos de cada genótipo foram considerados na busca local, isto é, a busca local não se encerrou somente ao encontrar uma melhoria, mas sim somente quando todos os vizinhos foram visitados, garantindo que o valor da função de fitness a ser atribuído ao indivíduo original corresponde ao melhor valor encontrado em sua vizinhança. Como uma das condições impostas pelo exercício é de executar somente uma iteração, não buscou-se exaustivamente o máximo localmente (ou seja, não repetiu-se a busca para o melhor vizinho encontrado na iteração anterior). No caso dessa função, isso levaria a uma convergência rápida para a solução ótima, tendo em vista que só existe o máximo global.\\
+
+\paragraph{} Para efeitos de comparação, as Figuras \ref{Q02_maximos_fitness_100_ger_nao_memetico}, \ref{Q02_minimos_fitness_100_ger_nao_memetico} e \ref{Q02_medias_fitness_100_ger_nao_memetico} exibem, respectivamente, os valores máximos, mínimos e médios das fitness encontrados ao longo das gerações em uma das 10 execuções independentes do algoritmo, não utilizando a busca local (ou seja, não é um algoritmo memético). A solução ótima não foi encontrada em nenhuma das execuções. Entretanto, percebe-se um gradual aumento da média dos valores da função de fitness nos indivíduos da população, sugerindo que a população se aproxima do máximo global.\\ 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = 0.8\textwidth]{Q02_maximos_fitness_100_ger_nao_memetico.eps}
+	\caption{Valores máximos de fitness encontrados em cada geração (não memético)}
+	\label{Q02_maximos_fitness_100_ger_nao_memetico}
+\end{figure}   
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = 0.8\textwidth]{Q02_minimos_fitness_100_ger_nao_memetico.eps}
+	\caption{Valores mínimos de fitness encontrados em cada geração (não memético)}
+	\label{Q02_minimos_fitness_100_ger_nao_memetico}
+\end{figure}   
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = 0.8\textwidth]{Q02_medias_fitness_100_ger_nao_memetico.eps}
+	\caption{Valores médios de fitness encontrados em cada geração (não memético)}	
+	\label{Q02_medias_fitness_100_ger_nao_memetico}
+\end{figure}   
+
+\paragraph{} Mesmo realizando somente uma iteração na busca local, a introdução desse passo no algoritmo rendeu um desempenho melhor do que a versão anterior. De fato, das 10 execuções desse novo algoritmo, cada uma indo até, no máximo, 100 gerações, o máximo global foi alcançado em 1, ao contrário da versão anterior, em que em nenhuma das execuções esse valor foi encontrado. A Figura \ref{Q02_maximos_fitness_100_ger_baldwin} exibe uma execução, na qual o valor máximo foi encontrado em 29 gerações. As Figuras \ref{Q02_minimos_fitness_100_ger_baldwin} e \ref{Q02_medias_fitness_100_ger_baldwin} exibem, respectivamente, as fitness mínimas e médias encontradas ao longo das 29 gerações. É interessante notar que a média de fitness, ao longo das gerações, assim como no caso anterior, foi aumentando, sugerindo uma aproximação do algoritmo da solução ótima global. A média de gerações requeridas para se alcançar o máximo global, levando-se em conta as 10 execuções independentes do algoritmo, foi de 92.2, com desvio-padrão de 21.2 gerações. Essas figuras retratam a aplicação da abordagem de Baldwin para a busca local.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = 0.8\textwidth]{Q02_maximos_fitness_100_ger_baldwin.eps}
+	\caption{Valores máximos de fitness encontrados em cada geração (Baldwin)}
+	\label{Q02_maximos_fitness_100_ger_baldwin}
+\end{figure}   
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = 0.8\textwidth]{Q02_minimos_fitness_100_ger_baldwin.eps}
+	\caption{Valores mínimos de fitness encontrados em cada geração (Baldwin)}
+	\label{Q02_minimos_fitness_100_ger_baldwin}
+\end{figure}   
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = 0.8\textwidth]{Q02_medias_fitness_100_ger_baldwin.eps}
+	\caption{Valores médios de fitness encontrados em cada geração (Baldwin)}	
+	\label{Q02_medias_fitness_100_ger_baldwin}
+\end{figure}   
+
+\paragraph{} Já as Figuras \ref{Q02_maximos_fitness_100_ger_lamarck}, \ref{Q02_minimos_fitness_100_ger_lamarck} e \ref{Q02_medias_fitness_100_ger_lamarck} exibem os valores máximos, mínimos e médios das fitness encontradas ao longo de cada geração, durante uma execução do algoritmo, utilizando-se a abordagem de Lamarck. Vale ressaltar que os resultados encontrados utilizando essa abordagem foram melhores do que aqueles obtidos pela abordagem de Baldwin. Nesse caso, o ótimo global foi encontrado em 2 das 10 execuções, requerendo, em média, 90.9 gerações para se alcançar essa solução, com um desvio-padrão de 24.1 gerações.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = 0.8\textwidth]{Q02_maximos_fitness_100_ger_lamarck.eps}
+	\caption{Valores máximos de fitness encontrados em cada geração (Lamarck)}
+	\label{Q02_maximos_fitness_100_ger_lamarck}
+\end{figure}   
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = 0.8\textwidth]{Q02_minimos_fitness_100_ger_lamarck.eps}
+	\caption{Valores mínimos de fitness encontrados em cada geração (Lamarck)}
+	\label{Q02_minimos_fitness_100_ger_lamarck}
+\end{figure}   
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = 0.8\textwidth]{Q02_medias_fitness_100_ger_lamarck.eps}
+	\caption{Valores médios de fitness encontrados em cada geração (Lamarck)}	
+	\label{Q02_medias_fitness_100_ger_lamarck}
+\end{figure}   
 
 \section*{Questão 3}
 
