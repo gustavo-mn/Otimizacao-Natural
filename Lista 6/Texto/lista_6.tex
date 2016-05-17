@@ -402,6 +402,111 @@ end
 
 \textbf{Escreva (utilizando um pseudo-código) um algoritmo genético simples para a solução do Exercício 4 da Lista de Exercícios \#5, considerando que a população não é de dicionários $\mathbf{Y}$, mas sim de matrizes $p_{\mathbf{y}|\mathbf{x}}$ descrevendo as probabilidades com as quais um vetor de dados $\mathbf{x}$ é atribuído a um agrupamento $\mathbf{y}$.}\\
 
-\paragraph{}
+\paragraph{} \paragraph{} Assim como foi feito no exercício 4 da lista 5, antes de se exibir o pseudo-código pensado para o problema, serão definidos alguns elementos básicos, que fazem parte do algoritmo genético simples.\\
+
+\begin{itemize}
+
+	\item[\textbf{1.}] \textbf{Representação}
+	
+	\paragraph{} De modo a facilitar a representação do problema, assume-se que os dados $\mathbf{x}(n)$ correspondem a vetores no $\mathbb{R}^2$, tendo, portanto, somente duas coordenadas $x_1$ e $x_2$, e que $x_1$, $x_2$ $\in \mathbb{Z}$. Os centróides $\mathbf{y}(i)$, por sua vez, também correspondem a vetores no $\mathbb{R}^2$, com coordenadas inteiras. O número $K$ de centróides é um parâmetro livre, o qual pode ser definido pelo usuário (o parâmetro $K$ poderia ser adaptado pelo próprio algoritmo, pensando em um algoritmo de parâmetros auto-adaptativo, por exemplo; entretanto, de modo a simplificar o algoritmo, determinou-se que tal parâmetro é estático, ou seja, definido antes da execução do algoritmo). Para esse problema, escolhe-se que $K = 3$.\\ 
+	
+	\paragraph{} Diferentemente da versão anterior desse exercício, os centróides encontram-se fixos. Com isso, a população do problema não define mais possíveis posições dos centróides, mas sim, probabilidades de associação de cada ponto $\mathbf{x}(n)$ aos centróides fixados. Busca-se a melhor associação, de modo que a mesma função custo anterior ($D = \frac{1}{N} \sum_{n = 1}^{N}||\mathbf{x}(n) - \mathbf{y}(k(n))||^2$) seja minimizada. Tendo isso em vista, o fenótipo das possíveis soluções são matrizes de transição $p_{\mathbf{y}|\mathbf{x}}$, de dimensão $KxN$ (no caso, $3xN$, já que $N$ representa o número de vetores de dados $\mathbf{x}$ e $K$, o número de centróides considerados, arbitrado em 3), cujas colunas correspondem aos $N$ pontos de dados $\mathbf{x}$ e cujas linhas correspondem aos centróides. Por simplicidade de representação, assume-se que cada ponto pertence, com 100\% de chance, a um centróide (contrariando o modelo mais genérico, no qual um ponto pode pertencer a mais de um centróide, com uma dada probabilidade a cada um). Dessa forma, o genótipo que codifica esses indivíduos consiste em blocos de 3 bits ($b_3 b_2 b_1$), em que um desses bits valerá 1, indicando que o ponto em questão pertence ao centróide $i, i = \{1,2,3\}$. Como existem $N$ pontos de dados, o genótipo final terá tamanho $3N$. A função custo é calculada, levando-se em conta o centróide ao qual cada ponto de dado está associado.\\
+	
+	\item[\textbf{2.}] \textbf{Seleção de pais}
+	
+	\paragraph{} A seleção de pais é feita por meio do algoritmo ``SUS" (\textit{Stochastic Universal Sampling}), de modo a garantir que os indivíduos com melhores fitness tenham mais chances de se reproduzir e gerar filhos melhores. O tamanho da população reprodutora é igual ao tamanho da população original. Além disso, cada par de pais é selecionado aleatoriamente da população reprodutora e ele gerará dois filhos.\\
+	
+	\item[\textbf{3.}] \textbf{Recombinação}
+	
+	\paragraph{} Tendo em vista que cada bloco de 3 bits representa um ponto de dado associado a um único centróide (ou seja, somente um bit dentre os três tem valor 1), buscando gerar filhos que respeitem essa restrição, o operador de recombinação consiste em separar o genótipo em $N$ segmentos de 3 bits, indexando-os de 1 a $N$. Depois, o filho 1 é formado por segmentos de número ímpar do pai 1 e por segmentos de número par do pai 2, ao passo que o filho 2 é formado por segmentos de número ímpar do pai 2 e por segmentos de número par do pai 1. Dessa forma, a recombinação mexe em todos os pontos de dados. Caso não haja recombinação, os filhos gerados serão, simplesmente, cópia dos pais. Arbitra-se que a probabilidade de recombinação é de 70\%.
+	
+	\item[\textbf{4.}] \textbf{Mutação}
+	
+	\paragraph{} Há, também, a chance dos filhos gerados sofrerem mutação. Novamente, define-se um operador de mutação que busque respeitar as restrições escolhidas para o problema (cada ponto só pode estar associado a um centróide). Com isso, cada um dos $N$ blocos de 3 bits, presentes em um indivíduo, tem a chance de sofrer mutação. Caso ela ocorra, ela consiste, simplemente, em comutar, nesse segmento, o bit de valor 1 com outro de valor 0 (por exemplo: $001 \rightarrow 010$). A nova posição que o bit de valor 1 ocupará no segmento é escolhida aleatoriamente, de acordo com a posição dos bits de valor 0. Se não houver mutação, o segmento em questão permanece inalterado. Define-se a probabilidade de mutação com o valor de 10\%.\\
+	
+	\item[\textbf{5.}] \textbf{Seleção de sobreviventes}
+	
+	\paragraph{} Uma vez finalizada a população de filhos, realiza-se a seleção de sobreviventes. Supondo que a população original tenha tamanho $\mu$, como cada par de pais gerou um par de filhos, existem $2\mu$ indivíduos, dos quais somente $\mu$ passarão para a geração seguinte. Para isso, calcula-se a função de fitness para cada indivíduo e a seleção feita por ranqueamento, ou seja, somente os indivíduos mais aptos, levando-se em conta pais e filhos, sobreviverão (alternativamente, os $\mu$ indivíduos menos aptos são substituídos). Essa abordagem também é conhecida como \textit{GENITOR}.\\
+	
+	\item[\textbf{6.}] \textbf{Inicialização}
+	
+	\paragraph{} A população é inicializada de forma aleatória da seguinte maneira: sorteiam-se $N$ números aleatórios entre 1 e 3, os quais definem as posições dos bits de valor 1 em cada um dos $N$ blocos. Então, cada um desses blocos é construído, colocando os bits de valor 1 na posição sorteada para cada segmento, e preenchendo com 0 as demais posições de cada segmento. Esse procedimento é repetido para cada indivíduo. O tamanho da população $\mu$ é definido como $\mu = 100$ indivíduos.\\
+	
+	\item[\textbf{7.}] \textbf{Condição de parada}
+	
+	\paragraph{} A condição de parada do algoritmo é dada por duas condições: até que se alcance um número pré-definido de gerações (aqui, definido como 1000 gerações), ou até que o melhor fitness encontrado seja menor do que $10^{-5}$ (o valor mínimo da função fitness, que se busca minimizar, é de 0, porém, dados os erros de aproximação computacionais, admite-se uma tolerância para esse mínimo).\\
+\end{itemize}
+
+\paragraph{} O pseudo-código é exibido a seguir:\\
+
+\begin{lstlisting}[style=pseudo-codigo]
+$tam\_pop \leftarrow 100$
+$x \leftarrow$ matriz contendo os vetores de dados
+$y \leftarrow$ matriz contendo os vetores de centróides
+$P \leftarrow$ inicialização da população, conforme explicado anteriormente
+
+$melhor\_fitness \leftarrow 10000$
+$n \leftarrow 1$
+$p_{rec} \leftarrow 0.7$
+$p_{mut} \leftarrow 0.1$
+
+Enquanto ($n < 1000$) e ($melhor\_fitness > 10^{-5}$) faça
+	
+	$F \leftarrow$ vetor contendo o valor da função de fitness (erro médio quadrático) de cada indivíduo da população, levando-se em conta as associações dado-centróide propostas em cada indivíduo
+	
+	$melhor\_fitness \leftarrow$ menor valor armazenado em $F$
+	
+	Calcula a probabilidade de cada indivíduo ser selecionado como pai, dividindo o inverso de sua fitness pela soma dos inversos de todas as fitness da população (usa-se os inversos, porque, dessa forma, as melhores fitness, que correspondem a valores menores, terão mais probabilidade de serem selecionados)
+	
+	$a \leftarrow$ vetor contendo a distribuição cumulativa, baseada nas probabilidades calculadas anteriormente, onde cada posição desse vetor corresponde ao $i$-ésimo indivíduo de $P$	
+	
+	$membro\_atual \leftarrow 1$
+	$i \leftarrow 1$
+	$r \leftarrow$ sorteia uma amostra da distribuição uniforme entre [0, $\frac{1}{\mu}$]
+	
+	Enquanto ($membro\_atual \leq \mu$) faça
+		Enquanto ($r \leq a[i]$) faça
+			
+			$reprodutores[membro\_atual] \leftarrow$ vetor contendo cópias dos pais da população $P$ selecionados para reprodução
+			
+			$r \leftarrow r + \frac{1}{\mu}$
+			$membro\_atual \leftarrow membro\_atual + 1$
+		Fim Enquanto
+		$i \leftarrow i + 1$
+	Fim Enquanto
+	
+	$i \leftarrow 1$
+	Enquanto ($i < tam\_pop$) faça
+		Seleciona aleatoriamente dois pais da população de reprodutores
+		$r \leftarrow$ sorteia um número da distribuição uniforme entre [0, 1]
+		Se ($r < p_{rec}$) faça
+			Segmenta cada pai em N blocos de 3 bits, indexando-os
+			Filho $i \leftarrow$ segmentos ímpares do pai 1 e segmentos pares do pai 2
+			Filho $i + 1 \leftarrow$ segmentos ímpares do pai 2 e segmentos pares do pai 1
+		Senão
+			Filho $i \leftarrow$ pai 1
+			Filho $i + 1 \leftarrow$ pai 2
+		Fim Se
+		
+		$i \leftarrow i + 2$
+	Fim Enquanto
+		
+	Para cada filho gerado faça
+		Para segmento de 3 bits do filho faça
+			$r \leftarrow$ sorteia um número da distribuição uniforme entre [0, 1]
+			Se ($r < p_{mut}$) faça
+				Troca a posição do bit de valor 1 com a posição de um dos dois bits de valor 0 presentes no segmento (tal posição é sorteada aleatoriamente)
+			Fim Se
+		Fim Para
+	Fim Para
+		
+	Calcula a função de fitness da população total filhos + pais
+	
+	$P \leftarrow$ os $tam\_pop$ indivíduos mais aptos para a próxima geração (ou seja, aqueles que apresentam os menores erros médios quadráticos)
+	
+	$n \leftarrow n + 1$
+Fim Enquanto
+	
+\end{lstlisting}
 
 \end{document}
