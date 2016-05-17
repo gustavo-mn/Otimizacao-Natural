@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.1)  16 MAY 2016 21:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.1)  16 MAY 2016 21:12
 entering extended mode
 **./lista_6.tex
 (lista_6.tex
@@ -630,12 +630,14 @@ Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count125
+ (capa.tex
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
+(Font)              using `OT1/cmr/bx/n' instead on input line 4.
 
- []
+[1
 
-
+{C:/Users/gusta/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
 Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
@@ -650,26 +652,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 76.
-("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 76.
-("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+
 Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-[1
-
-{C:/Users/gusta/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+LaTeX Font Info:    Try loading font information for U+msa on input line 78.
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 78.
+("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
-
+[1]
 Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
@@ -685,12 +685,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
@@ -699,30 +699,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
-[2]
+
 Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
 ("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
 )
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 125.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 127.
 
 
 ("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 125.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 127.
 
 [3] [4] [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--295
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
 
  []
 
@@ -737,17 +742,17 @@ memetico-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_maximos_fitne
 ss_100_ger_nao_memetico-eps-converted-to.pdf ./Imagens/Q02_maximos_fitness_100_
 ger_nao_memetico.eps>
-(epstopdf)             \includegraphics on input line 298.
+(epstopdf)             \includegraphics on input line 300.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Imagens/Q02_maximos_fitness_100_ger_nao_memetico-eps-converted-to.pdf, id=29
+<./Imagens/Q02_maximos_fitness_100_ger_nao_memetico-eps-converted-to.pdf, id=33
 , 963.6pt x 683.55376pt>
 File: ./Imagens/Q02_maximos_fitness_100_ger_nao_memetico-eps-converted-to.pdf G
 raphic file (type pdf)
 
 <use ./Imagens/Q02_maximos_fitness_100_ger_nao_memetico-eps-converted-to.pdf>
 Package pdftex.def Info: ./Imagens/Q02_maximos_fitness_100_ger_nao_memetico-eps
--converted-to.pdf used on input line 298.
+-converted-to.pdf used on input line 300.
 (pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
 
 [7]
@@ -762,17 +767,17 @@ memetico-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_minimos_fitne
 ss_100_ger_nao_memetico-eps-converted-to.pdf ./Imagens/Q02_minimos_fitness_100_
 ger_nao_memetico.eps>
-(epstopdf)             \includegraphics on input line 305.
+(epstopdf)             \includegraphics on input line 307.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Imagens/Q02_minimos_fitness_100_ger_nao_memetico-eps-converted-to.pdf, id=34
+<./Imagens/Q02_minimos_fitness_100_ger_nao_memetico-eps-converted-to.pdf, id=37
 , 963.6pt x 683.55376pt>
 File: ./Imagens/Q02_minimos_fitness_100_ger_nao_memetico-eps-converted-to.pdf G
 raphic file (type pdf)
 
 <use ./Imagens/Q02_minimos_fitness_100_ger_nao_memetico-eps-converted-to.pdf>
 Package pdftex.def Info: ./Imagens/Q02_minimos_fitness_100_ger_nao_memetico-eps
--converted-to.pdf used on input line 305.
+-converted-to.pdf used on input line 307.
 (pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
 Package epstopdf Info: Source file: <./Imagens/Q02_medias_fitness_100_ger_nao_m
 emetico.eps>
@@ -785,22 +790,22 @@ emetico-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_medias_fitnes
 s_100_ger_nao_memetico-eps-converted-to.pdf ./Imagens/Q02_medias_fitness_100_ge
 r_nao_memetico.eps>
-(epstopdf)             \includegraphics on input line 312.
+(epstopdf)             \includegraphics on input line 314.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Imagens/Q02_medias_fitness_100_ger_nao_memetico-eps-converted-to.pdf, id=35,
+<./Imagens/Q02_medias_fitness_100_ger_nao_memetico-eps-converted-to.pdf, id=38,
  963.6pt x 683.55376pt>
 File: ./Imagens/Q02_medias_fitness_100_ger_nao_memetico-eps-converted-to.pdf Gr
 aphic file (type pdf)
 
 <use ./Imagens/Q02_medias_fitness_100_ger_nao_memetico-eps-converted-to.pdf>
 Package pdftex.def Info: ./Imagens/Q02_medias_fitness_100_ger_nao_memetico-eps-
-converted-to.pdf used on input line 312.
+converted-to.pdf used on input line 314.
 (pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
 
 [8 <./Imagens/Q02_maximos_fitness_100_ger_nao_memetico-eps-converted-to.pdf> <.
 /Imagens/Q02_minimos_fitness_100_ger_nao_memetico-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 317--318
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
 
  []
 
@@ -815,17 +820,17 @@ win-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_maximos_fitne
 ss_100_ger_baldwin-eps-converted-to.pdf ./Imagens/Q02_maximos_fitness_100_ger_b
 aldwin.eps>
-(epstopdf)             \includegraphics on input line 321.
+(epstopdf)             \includegraphics on input line 323.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Imagens/Q02_maximos_fitness_100_ger_baldwin-eps-converted-to.pdf, id=47, 963
+<./Imagens/Q02_maximos_fitness_100_ger_baldwin-eps-converted-to.pdf, id=50, 963
 .6pt x 683.55376pt>
 File: ./Imagens/Q02_maximos_fitness_100_ger_baldwin-eps-converted-to.pdf Graphi
 c file (type pdf)
 
 <use ./Imagens/Q02_maximos_fitness_100_ger_baldwin-eps-converted-to.pdf>
 Package pdftex.def Info: ./Imagens/Q02_maximos_fitness_100_ger_baldwin-eps-conv
-erted-to.pdf used on input line 321.
+erted-to.pdf used on input line 323.
 (pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
 
 [9 <./Imagens/Q02_medias_fitness_100_ger_nao_memetico-eps-converted-to.pdf>]
@@ -840,17 +845,17 @@ win-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_minimos_fitne
 ss_100_ger_baldwin-eps-converted-to.pdf ./Imagens/Q02_minimos_fitness_100_ger_b
 aldwin.eps>
-(epstopdf)             \includegraphics on input line 328.
+(epstopdf)             \includegraphics on input line 330.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Imagens/Q02_minimos_fitness_100_ger_baldwin-eps-converted-to.pdf, id=55, 963
+<./Imagens/Q02_minimos_fitness_100_ger_baldwin-eps-converted-to.pdf, id=58, 963
 .6pt x 683.55376pt>
 File: ./Imagens/Q02_minimos_fitness_100_ger_baldwin-eps-converted-to.pdf Graphi
 c file (type pdf)
 
 <use ./Imagens/Q02_minimos_fitness_100_ger_baldwin-eps-converted-to.pdf>
 Package pdftex.def Info: ./Imagens/Q02_minimos_fitness_100_ger_baldwin-eps-conv
-erted-to.pdf used on input line 328.
+erted-to.pdf used on input line 330.
 (pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
 Package epstopdf Info: Source file: <./Imagens/Q02_medias_fitness_100_ger_baldw
 in.eps>
@@ -863,22 +868,22 @@ in-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_medias_fitnes
 s_100_ger_baldwin-eps-converted-to.pdf ./Imagens/Q02_medias_fitness_100_ger_bal
 dwin.eps>
-(epstopdf)             \includegraphics on input line 335.
+(epstopdf)             \includegraphics on input line 337.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Imagens/Q02_medias_fitness_100_ger_baldwin-eps-converted-to.pdf, id=56, 963.
+<./Imagens/Q02_medias_fitness_100_ger_baldwin-eps-converted-to.pdf, id=59, 963.
 6pt x 683.55376pt>
 File: ./Imagens/Q02_medias_fitness_100_ger_baldwin-eps-converted-to.pdf Graphic
  file (type pdf)
 
 <use ./Imagens/Q02_medias_fitness_100_ger_baldwin-eps-converted-to.pdf>
 Package pdftex.def Info: ./Imagens/Q02_medias_fitness_100_ger_baldwin-eps-conve
-rted-to.pdf used on input line 335.
+rted-to.pdf used on input line 337.
 (pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
 
 [10 <./Imagens/Q02_maximos_fitness_100_ger_baldwin-eps-converted-to.pdf> <./Ima
 gens/Q02_minimos_fitness_100_ger_baldwin-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 340--341
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
 
  []
 
@@ -893,17 +898,17 @@ rck-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_maximos_fitne
 ss_100_ger_lamarck-eps-converted-to.pdf ./Imagens/Q02_maximos_fitness_100_ger_l
 amarck.eps>
-(epstopdf)             \includegraphics on input line 344.
+(epstopdf)             \includegraphics on input line 346.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Imagens/Q02_maximos_fitness_100_ger_lamarck-eps-converted-to.pdf, id=68, 963
+<./Imagens/Q02_maximos_fitness_100_ger_lamarck-eps-converted-to.pdf, id=71, 963
 .6pt x 683.55376pt>
 File: ./Imagens/Q02_maximos_fitness_100_ger_lamarck-eps-converted-to.pdf Graphi
 c file (type pdf)
 
 <use ./Imagens/Q02_maximos_fitness_100_ger_lamarck-eps-converted-to.pdf>
 Package pdftex.def Info: ./Imagens/Q02_maximos_fitness_100_ger_lamarck-eps-conv
-erted-to.pdf used on input line 344.
+erted-to.pdf used on input line 346.
 (pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
 
 [11 <./Imagens/Q02_medias_fitness_100_ger_baldwin-eps-converted-to.pdf>]
@@ -918,17 +923,17 @@ rck-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_minimos_fitne
 ss_100_ger_lamarck-eps-converted-to.pdf ./Imagens/Q02_minimos_fitness_100_ger_l
 amarck.eps>
-(epstopdf)             \includegraphics on input line 351.
+(epstopdf)             \includegraphics on input line 353.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Imagens/Q02_minimos_fitness_100_ger_lamarck-eps-converted-to.pdf, id=76, 963
+<./Imagens/Q02_minimos_fitness_100_ger_lamarck-eps-converted-to.pdf, id=79, 963
 .6pt x 683.55376pt>
 File: ./Imagens/Q02_minimos_fitness_100_ger_lamarck-eps-converted-to.pdf Graphi
 c file (type pdf)
 
 <use ./Imagens/Q02_minimos_fitness_100_ger_lamarck-eps-converted-to.pdf>
 Package pdftex.def Info: ./Imagens/Q02_minimos_fitness_100_ger_lamarck-eps-conv
-erted-to.pdf used on input line 351.
+erted-to.pdf used on input line 353.
 (pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
 Package epstopdf Info: Source file: <./Imagens/Q02_medias_fitness_100_ger_lamar
 ck.eps>
@@ -941,26 +946,21 @@ ck-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=./Imagens/Q02_medias_fitnes
 s_100_ger_lamarck-eps-converted-to.pdf ./Imagens/Q02_medias_fitness_100_ger_lam
 arck.eps>
-(epstopdf)             \includegraphics on input line 358.
+(epstopdf)             \includegraphics on input line 360.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Imagens/Q02_medias_fitness_100_ger_lamarck-eps-converted-to.pdf, id=77, 963.
+<./Imagens/Q02_medias_fitness_100_ger_lamarck-eps-converted-to.pdf, id=80, 963.
 6pt x 683.55376pt>
 File: ./Imagens/Q02_medias_fitness_100_ger_lamarck-eps-converted-to.pdf Graphic
  file (type pdf)
 
 <use ./Imagens/Q02_medias_fitness_100_ger_lamarck-eps-converted-to.pdf>
 Package pdftex.def Info: ./Imagens/Q02_medias_fitness_100_ger_lamarck-eps-conve
-rted-to.pdf used on input line 358.
+rted-to.pdf used on input line 360.
 (pdftex.def)             Requested size: 276.00105pt x 195.78485pt.
 
 [12 <./Imagens/Q02_maximos_fitness_100_ger_lamarck-eps-converted-to.pdf> <./Ima
 gens/Q02_minimos_fitness_100_ger_lamarck-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 365--366
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 367--368
 
  []
@@ -970,23 +970,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 369--370
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
+
+ []
+
 [13 <./Imagens/Q02_medias_fitness_100_ger_lamarck-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 379--380
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 395--396
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--400
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
 
  []
 
@@ -996,14 +996,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 405--406
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--412
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
 
- []
-
-[15]
-Overfull \hbox (10.8338pt too wide) in paragraph at lines 413--414
- [] \OT1/cmr/m/n/10 Di-fe-ren-te-mente da vers~ao an-te-rior desse exerccio, 
-os centroides encontram-
  []
 
 
@@ -1011,77 +1005,91 @@ Underfull \hbox (badness 10000) in paragraph at lines 413--414
 
  []
 
+[15]
+Overfull \hbox (10.8338pt too wide) in paragraph at lines 415--416
+ [] \OT1/cmr/m/n/10 Di-fe-ren-te-mente da vers~ao an-te-rior desse exerccio, 
+os centroides encontram-
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--418
+
+Underfull \hbox (badness 10000) in paragraph at lines 415--416
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 419--420
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 425--426
+Underfull \hbox (badness 10000) in paragraph at lines 427--428
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--430
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--434
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--438
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 440--441
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 442.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 444.
 
 ("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) ("C:\Users\gusta\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
 )
-[18] [19] [20] (lista_6.aux) ) 
+[18] [19] [20] (lista_6.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
 Here is how much of TeX's memory you used:
- 7686 strings out of 493634
- 111867 string characters out of 3135240
+ 7695 strings out of 493634
+ 111976 string characters out of 3135240
  399310 words of memory out of 3000000
- 10934 multiletter control sequences out of 15000+200000
- 11623 words of font info for 45 fonts, out of 3000000 for 9000
+ 10939 multiletter control sequences out of 15000+200000
+ 12538 words of font info for 48 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  42i,6n,40p,1517b,2579s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9
-/fonts/enc/dvips/fontname/8r.enc}<C:/Users/gusta/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/gusta/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/gusta/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/User
-s/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti
-10.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmex10.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmmi10.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/gusta/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/gusta/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/
-gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
-><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmr8.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/gusta/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/gusta/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/gusta/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb
-><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr
-8a.pfb>
-Output written on lista_6.pdf (20 pages, 317793 bytes).
+{C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/fontname/8r
+.enc}<C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmbx10.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmbx12.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/gusta/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/gusta/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/User
+s/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmmi7.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/gusta/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/gusta/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/gusta/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
+/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+msy7.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmti10.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/gusta/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on lista_6.pdf (21 pages, 325469 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
+ 184 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
